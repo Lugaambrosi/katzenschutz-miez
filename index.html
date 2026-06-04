@@ -3,140 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="KatzenSchutz Miez Ã¢Â€Â“ Katzenkrankenversicherung und Katzen-OP-Schutz von BarmeniaGothaer. PersÃƒÂ¶nliche Beratung durch Luca Ambos, Berlin.">
-<title>KatzenSchutz Miez Ã¢Â€Â“ Katzenkrankenversicherung mit Luca Ambos</title>
+<meta name="description" content="Katzenkrankenversicherung und Katzen-OP-Schutz der BarmeniaGothaer. Pers&ouml;nliche Beratung durch Luca Ambos, Berlin. EisbaumTabelle Testsieger 2026.">
+<title>KatzenSchutz Miez &ndash; Katzenkrankenversicherung mit Luca Ambos</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a2e}
-nav{position:sticky;top:0;z-index:100;background:#1a1a2e;padding:.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
-.nav-brand{color:white;font-weight:800;font-size:.95rem}
-.nav-links{display:flex;gap:1.2rem;align-items:center}
-.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.85rem}
-.nav-cta{background:#7c3aed;color:white;padding:.5rem 1.1rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:.85rem}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a2e;background:#fff}
+a{text-decoration:none}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:#1a1a2e;padding:.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-brand{color:#fff;font-weight:800;font-size:.95rem;white-space:nowrap}
+.nav-links{display:flex;gap:1.2rem}
+.nav-links a{color:rgba(255,255,255,.8);font-size:.85rem}
+.btn-nav{background:#7c3aed;color:#fff;padding:.5rem 1.1rem;border-radius:8px;font-weight:700;font-size:.85rem;white-space:nowrap}
 @media(max-width:640px){.nav-links{display:none}}
-#hero{background:linear-gradient(135deg,#1a1a2e 0%,#2d1b69 50%,#1a1a2e 100%);min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 1.5rem;position:relative;overflow:hidden}
-#hero::before{content:"Ã°ÂŸÂÂˆ";position:absolute;font-size:20rem;opacity:.03;top:50%;left:50%;transform:translate(-50%,-50%)}
-.hero-content{max-width:700px;position:relative;z-index:1}
-.hero-content h1{font-size:clamp(1.8rem,5vw,3rem);font-weight:900;color:white;line-height:1.2;margin-bottom:1rem}
-.hero-content p{color:rgba(255,255,255,.8);font-size:1rem;margin-bottom:2rem;line-height:1.6}
+
+/* HERO */
+#hero{background:linear-gradient(160deg,#0f0c29,#302b63,#24243e);min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 1.5rem;position:relative;overflow:hidden}
+#hero::after{content:'';position:absolute;inset:0;background:url('katz_hero.jpg') center/cover no-repeat;opacity:.15;z-index:0}
+.hero-inner{max-width:720px;position:relative;z-index:1}
+.hero-inner h1{font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:1.2rem}
+.hero-inner p{color:rgba(255,255,255,.82);font-size:1.05rem;margin-bottom:2rem;line-height:1.7}
 .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:#7c3aed;color:white;padding:.9rem 2rem;border-radius:10px;text-decoration:none;font-weight:800;font-size:1rem}
-.btn-secondary{background:rgba(255,255,255,.1);color:white;padding:.9rem 1.5rem;border-radius:10px;text-decoration:none;font-weight:600;font-size:.9rem;border:1px solid rgba(255,255,255,.3)}
-.hero-badges{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
-.hero-badge{background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);padding:.4rem .8rem;border-radius:20px;font-size:.75rem;border:1px solid rgba(255,255,255,.15)}
-section{padding:3rem 1rem}
-.container{max-width:900px;margin:0 auto}
-h2{font-size:1.6rem;font-weight:800;color:#1a1a2e;margin-bottom:.5rem;text-align:center}
-.section-label{font-size:.65rem;color:#7c3aed;letter-spacing:.12em;font-weight:700;text-align:center;text-transform:uppercase;margin-bottom:.5rem}
-.section-sub{font-size:.95rem;color:#555;text-align:center;margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
-#vertrauen{background:#f5f0ff;padding:1.5rem 1rem;border-bottom:1px solid #e9d5ff}
-.trust-cards{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1rem}
-.trust-card{display:flex;flex-direction:column;align-items:center;gap:.35rem;background:white;padding:1rem 1.4rem;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.07);min-width:145px;text-decoration:none}
-.warum-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2rem}
-.warum-card{background:#f8f4ff;border-radius:16px;padding:1.5rem;border-left:4px solid #7c3aed}
-.warum-icon{font-size:1.8rem;margin-bottom:.8rem}
-.warum-card h3{font-size:.95rem;font-weight:700;margin-bottom:.5rem}
-.warum-card p{font-size:.82rem;color:#555;line-height:1.5}
-.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:2rem 0}
-.photo-placeholder{aspect-ratio:1;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:3rem}
-#luca{background:#1a1a2e;color:white}
-#luca h2{color:white}
-#luca .section-label{color:#a78bfa}
-.luca-inner{display:grid;grid-template-columns:180px 1fr;gap:2rem;align-items:center;margin-top:2rem}
-.luca-avatar{width:180px;height:180px;border-radius:50%;border:4px solid #7c3aed;background:linear-gradient(135deg,#7c3aed,#4f46e5);display:flex;align-items:center;justify-content:center;font-size:4rem}
-.luca-text ul{list-style:none;margin-top:1rem}
-.luca-text ul li{padding:.4rem 0;color:rgba(255,255,255,.85);font-size:.9rem;padding-left:1.5rem;position:relative}
-.luca-text ul li::before{content:"Ã¢ÂœÂ“";position:absolute;left:0;color:#7c3aed;font-weight:700}
-@media(max-width:600px){.luca-inner{grid-template-columns:1fr;text-align:center}.luca-avatar{margin:0 auto}.photo-strip{grid-template-columns:1fr}}
-#szenarien{background:#f8f9fa}
-.szenarien-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:2rem}
-.szenario-card{background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.kosten-label{font-size:.6rem;font-weight:700;color:#7c3aed;letter-spacing:.1em;text-transform:uppercase;margin-top:.8rem}
-.kosten-value{font-size:1.2rem;font-weight:900;color:#1a1a2e;margin:.2rem 0 .6rem}
-.szenario-list{list-style:none;font-size:.75rem;color:#555}
-.szenario-list li{padding:.2rem 0;padding-left:1.2rem;position:relative}
-.szenario-list li::before{content:"Ã¢ÂœÂ“";position:absolute;left:0;color:#7c3aed}
-.szenario-badge{margin-top:.8rem;background:#f5f0ff;color:#7c3aed;padding:.3rem .8rem;border-radius:20px;font-size:.7rem;font-weight:600;display:inline-block}
-#vergleich{background:white}
-.tarif-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem}
-.tarif-card{border-radius:16px;padding:1.5rem;border:2px solid #e5e7eb}
-.tarif-card.featured{border-color:#7c3aed;background:#f5f0ff}
-.tarif-badge{font-size:.65rem;font-weight:700;color:white;background:#7c3aed;padding:.2rem .6rem;border-radius:3px;display:inline-block;margin-bottom:.5rem}
-.tarif-price{font-size:2rem;font-weight:900;color:#1a1a2e;margin:.5rem 0}
-.tarif-features{list-style:none;margin:1rem 0}
-.tarif-features li{padding:.3rem 0;font-size:.82rem;color:#555;padding-left:1.5rem;position:relative}
-.tarif-features li::before{content:"Ã¢ÂœÂ“";position:absolute;left:0;color:#7c3aed;font-weight:700}
-.tarif-cta{display:block;text-align:center;padding:.8rem;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;margin-top:1rem;background:#7c3aed;color:white}
-.tarif-cta.outline{background:white;color:#7c3aed;border:2px solid #7c3aed}
-#bewertungen{background:white;padding:2.5rem 1rem;border-bottom:1px solid #f0f0f0}
-.reviews-scroll{display:flex;gap:1rem;overflow-x:auto;padding-bottom:.5rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.review-card{min-width:260px;max-width:280px;background:#f9f9f9;border-radius:12px;padding:1.2rem;scroll-snap-align:start;flex-shrink:0;border:1px solid #eee}
-#schritte{background:#f8f4ff}
-.schritte-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;margin-top:2rem}
-.schritt{text-align:center;padding:1rem}
-.schritt-num{width:40px;height:40px;background:#7c3aed;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;margin:0 auto .8rem}
-#anfrage{background:#1a1a2e}
-#anfrage h2{color:white}
-#anfrage .section-label{color:#a78bfa}
-#anfrage .section-sub{color:rgba(255,255,255,.7)}
-form{max-width:600px;margin:0 auto}
-.form-group{margin-bottom:1rem}
-.form-group label{display:block;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.8);margin-bottom:.3rem}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:.7rem;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;font-size:.9rem}
-.form-group textarea{min-height:80px;resize:vertical}
-.form-submit{width:100%;padding:1rem;background:#7c3aed;color:white;border:none;border-radius:10px;font-weight:800;font-size:1rem;cursor:pointer}
-.form-section-title{font-size:.65rem;color:#a78bfa;letter-spacing:.1em;font-weight:700;text-transform:uppercase;margin:1.2rem 0 .5rem}
-footer{background:#0f0f1a;color:rgba(255,255,255,.6);padding:2rem 1rem;text-align:center}
-.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem}
-.footer-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.8rem}
-.footer-disclaimer{font-size:.7rem;color:rgba(255,255,255,.35);margin-top:1rem;line-height:1.5;max-width:700px;margin-left:auto;margin-right:auto}
-.wa-bubble{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999}
-.wa-bubble a{background:#25d366;color:white;padding:.7rem 1.2rem;border-radius:50px;text-decoration:none;font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:.5rem;box-shadow:0 4px 20px rgba(37,211,102,.4);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,.7)}}
-</style>
-</head>
-<body>
+.btn-primary{background:#7c3aed;color:#fff;padding:1rem 2.2rem;border-radius:10px;font-weight:800;font-size:1rem;display:inline-block}
+.btn-secondary{background:rgba(255,255,255,.1);color:#fff;padding:1rem 1.6rem;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid rgba(255,255,255,.25);display:inline-block}
+.hero-badges{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:1.8rem}
+.hero-badge{background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);padding:.4rem .9rem;border-radius:20px;font-size:.75rem;border:1px solid rgba(255,255,255,.15)}
 
-<nav>
-  <span class="nav-brand">Ã°ÂŸÂÂˆ KatzenSchutz Miez Ã‚Â· BarmeniaGothaer</span>
-  <div class="nav-links">
-    <a href="#szenarien">Kostenbeispiele</a>
-    <a href="#vergleich">KV oder OP?</a>
-    <a href="#anfrage">Beratung</a>
-  </div>
-  <a href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&versicherung=kv&adm=00011802" target="_blank" class="nav-cta">Ã°ÂŸÂ§Â® Beitrag berechnen</a>
-</nav>
-
-<section id="hero">
-  <div class="hero-content">
-    <h1>Deine Katze gehÃƒÂ¶rt zur Familie.<br>SchÃƒÂ¼tz sie, bevor der Ernstfall kommt.</h1>
-    <p>Tierarztkosten fÃƒÂ¼r Katzen kÃƒÂ¶nnen schnell mehrere tausend Euro kosten Ã¢Â€Â“ oft ohne Vorwarnung. Ich helfe dir, den richtigen Schutz zu finden: verstÃƒÂ¤ndlich, persÃƒÂ¶nlich, ohne Tarifchaos.</p>
-    <div class="hero-btns">
-      <a href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&versicherung=kv&adm=00011802" target="_blank" class="btn-primary">Ã°ÂŸÂ§Â® Jetzt kostenlos Beitrag berechnen</a>
-      <a href="#anfrage" class="btn-secondary">Ã°ÂŸÂ’Â¬ PersÃƒÂ¶nliche Beratung</a>
-    </div>
-    <div class="hero-badges">
-      <span class="hero-badge">Ã¢ÂœÂ“ Keine versteckten Kosten</span>
-      <span class="hero-badge">Ã¢ÂœÂ“ PersÃƒÂ¶nliche Ansprechperson</span>
-      <span class="hero-badge">Ã¢ÂœÂ“ Direkt online abschlieÃƒÂŸen</span>
-    </div>
-  </div>
-</section>
-
-<section id="vertrauen" style="background:#f5f0ff;padding:1.5rem 1rem;border-bottom:1px solid #e9d5ff">
-  <div style="max-width:900px;margin:0 auto;text-align:center">
-    <p style="font-size:.68rem;color:#7c3aed;letter-spacing:.12em;font-weight:700;margin:0 0 1rem;text-transform:uppercase">Ausgezeichnet &amp; bewertet</p>
-    <div class="trust-cards">
-      <a href="https://www.eisbaumtabelle.de/katze" target="_blank" class="trust-card" style="border:2px solid #f5c518"><span style="font-size:.6rem;font-weight:700;color:white;background:#1a1a2e;padding:.15rem .5rem;border-radius:3px">TESTSIEGER 2026</span><span style="font-size:1.5rem;font-weight:900;color:#1a1a2e">Ã°ÂŸÂÂ† Platz 1</span><span style="font-size:.7rem;font-weight:700;color:#555">EisbaumTabelle</span><span style="font-size:.6rem;color:#999">Katzenkrankenversicherung</span></a><div class="trust-card" style="border:2px solid #4ade80"><span style="font-size:.6rem;font-weight:700;color:white;background:#16a34a;padding:.15rem .5rem;border-radius:3spx">BESTES ERGEBNIS</span><span style="font-size:2zem;font-weight:900;color:#16a34a">98%</span><span style="font-size:.7rem;font-weight:700;color:#555">ÃƒÂ˜-Erstattung</span><span style="font-size:.6rem;color:#999">Barmenia Premium Plus</span></div><a href="https://g.page/r/CZ_BYAxxpUq7EAE/review" target="_blank" class="trust-card" style="border:2px solid #4285f4"><span style="font-size:.6rem;font-weight:700;color:white;background:#4285f4;padding:.15rem .5rem;border-radius:3px">GOOGLE</span><span style="font-size:1.3rem">Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­Â</span><span style="font-size:.7rem;font-weight:700;color:#4285f4">5,0 Ã‚Â· 5 Bewertungen</span><span style="font-size:.6rem;color:#999">Bewertung schreiben</span></a></div></div>
-</section>
-
-<section id="warum"><div class="container"><p></p><h2>Warum braucht deine Katze eine KrankenvÃÂ¯sicherung?</h2><p class="section-sub">Katzen sind Meister darin, Schmerzen zu verbergen.</p><div class="warum-grid"><div class="warum-card"><div class="warum-icon">Ã°ÂŸÂ˜Â¶</div><h3>Kaxzen zeigen keinen Schmerz</h3><p>Bis du merkst, dass etwas nicht stimmt.</p></div><div class="warum-card"><div class="warum-icon">Ã°ÂŸÂ’Â¸</div><h3>Eine OP = oft 2.000-5.000 Ã¢Â‚Â¬</h3><p>TierÃƒÂ¤rzte rechennen nach GOT.</p></div><div class="warum-card"><div class="warum-icon">Ã°ÂŸÂ›Â¡</div><h3>Schon ab 14,84 Ã¢Â‚Â¬/Monat</h3><p>Mit dem Premium-Tarif der BarmeniaGothaer.</p></div></div><div class="photo-strip"><img src="katz_jung.jpg" alt="Junge Katze" class="photo-placeholder" style="object-fit:cover"><img src="katz_3.jpg" alt="Luca mit Katze" class="photo-placeholder" style="object-fit:cover"><img src="katz_postop.jpg" alt="Katze nach OP" class="photo-placeholder" style="object-fit:cover"></div></div>
-</section>
-<section id="luca"><div class="container"><p class="section-label">KEIN PORTAL - EIN ECHTER ANSPRECHPARTNER</p><h2>Hi, ich bin Luca Ã¢Â€Â“ Katzenliebhaber & dein Berater.</h2><div class="luca-inner"><div class="luca-avatar">Ã°ÂŸÂ§Â‘</div><div class="luca-text"><p style="color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.6">Ich bin kein Katzenhalter - aber ein echter Katzenliebhaber. Und als Versicherungsberater kenne ich die Geschichten meiner Kunden: wie schnell ein Notfall kommt, wie hoch die Kosten werden konnen - und wie erleichtert man ist, wenn man gut abgesichert ist.</p><ul><li>Klare Empfehlung - ich sage dir, was ich fur sinnvoll halte</li><li>Kein Versicherungsdeutsch - verstandlich erklart</li><li>Feste Ansprechperson - vor und nach dem Abschluss</li><li>Schnell & enfach - direkt online abschliessen</li></ul></div></div></div>
-</section>
-<section id="schiitte"><div class="container"><h2>So einfach lauft es ab</h2><div class="schritte-grid"><div class="schritt"><div class="schritt-num">1</div><h3>Anfrage stellen</h3><p style="font-size:.75rem;color:#666">Kurzes Formular, 3 Minuten</p></div><div class="schritt"><div class="schritt-num">2</div><h3>Katzendaten</h3><p style="font-size:.75rem;color:#666">Rasse, Alter, Gesundheit</p></div><div class="schritt"><div class="schritt-num">3</div><h3>Einschatzung</h3><p style="font-size:.75rem;color:#666">Personliche Empfehlung</p></div><div class="schritt"><div class="schritt-num">4</div><h3>Schutz wahlen</h3><p>KV oder OP</p></div><div class="schritt"><div class="schritt-num">5</div><h3>Online abschliessen</h3><p>Direkt uber meinen Link</p></div><div class="schritt"><div class="schritt-num">6</div><h3>Weiter begleitet</h3><p>Ich bin weiter da</p></div></div></div>
-</section>
-<section id="anfrage"><div class="container"><p class="section-label">BERATUNG STARTEN</p><h2>Katzen-Schutz-Check</h2><form action="https://formspree.io/f/xpqnvjzw" method="POST"><div class="form-group"><label>Vorname *</label><input type="text" name="vorname" required></div><div class="form-group"><label>Nachname *</label><input type="text" name="nachname" required></div><div class="form-group"><label>Telefonnummer *</label><input type="tel" name="telefon" required></div><div class="form-group"><label>E-Mail *</label><input type="email" name="email" required></div><div class="form-group"><label>Name der Katze *</label><input type="text" name="katze_name" required></div><div class="form-group"><label>Rasse *</label><input type="text" name="rasse" required></div><div class="form-group"><label>Was interessiert dich? *</label><select name="interesse" required><option>Bitte wahlen</option><option>Katzenkrankenversicherung</option><option>Katzen-OP-Schutz</option><option>Unsicher - bitte beraten</option></select></div><div class="form-group"><label>Anmerkungen</label><textarea name="anmerkungen"></textarea></div><button type="submit" class="form-submit">Katen-Schutz-Check starten</button></form></div>
-</section>
-<footer><div style="max-width:900px;margin:0 auto"><div class="footer-links"><a href="mailto:ambos.luca@gmail.com">E-Mail</a><a href="https://wa.me/4917679552698">WhatsApp</a><a href="https://g.page/r/CZ_BYAxxpUq7EAE/review" target="_blank">Google Bewertung</a></div><p class="footer-disclaimer">Diese Seite vermittelt offizielle Versicherungs produkte der BarmeniaGothaer. Luca Ambos ist autorisierter Vermittler.</p></div></footer>
-<div class="wa-bubble"><a href="https://wa.me/4917679552698" target="_blank">WhatsApp</a></div></body></html>
+/* SECTIONS */
+section{padding:3.5rem 1.5rem}
+.container{max-width:960px;margin:0 auto}
+.section-label{font-size:.65rem;color:#7c3aed;letter-spacing:.14em;font-weight:700;text-align:center;text-transform:uppercase;margin-bottom:.6rem}
+h2{font-size:1.75rem;font-weight:800;color:#1a1a2e;text-align:center;margin-bottom:.6rem;line-height:1.2}
+.section-sub{font-size:.95rem;color:#666;text-align:center;margin-bottom:2.5rem;max-width:600px;margin-left:auto;margin-right:auto}
+ã"“¶&6¶w&÷VæC§&v&ƒ#SRÃ#SRÃ#SRÂãr“¶6öÆ÷#¢6ffc¶föçB×6—¦S¢ã—&VÓ¶föçBÖfÖ–Ç“¦–æ†W&—GĞ¢æf÷&ÒÖw&÷WFW‡F&V¶Ö–âÖ†V–v‡C£“ƒ·&W6—¦S§fW'F–6ÇĞ¢æf÷&Ò×6V7F–öâ×F—FÆW¶föçB×6—¦S¢ãcW&VÓ¶6öÆ÷#¢6s†&f¶ÆWGFW"×76–æs¢ãVÓ¶föçB×vV–v‡C£s·FW‡B×G&ç6f÷&Ó§WW&66S¶Ö&v–ã£ã7&VÒãg&V×Ğ¢æ'Fâ×7V&Ö—G·v–GFƒ£S·FF–æs£ã&VÓ¶&6¶w&÷VæC¢3v36VC¶6öÆ÷#¢6ffc¶&÷&FW#¦æöæS¶&÷&FW"×&F—W3£ƒ¶föçB×vV–v‡C£ƒ¶föçB×6—¦S£&VÓ¶7W'6÷#§ö–çFW#¶Ö&v–â×F÷¢ãW&VÓ¶föçBÖfÖ–Ç“¦–æ†W&—GĞ¢æf÷&ÒÖF—66Æ–ÖW'¶föçB×6—¦S¢ãw&VÓ¶6öÆ÷#§&v&ƒ#SRÃ#SRÃ#SRÂãCR“·FW‡BÖÆ–vã¦6VçFW#¶Ö&v–â×F÷¢ã—&VÓ¶Æ–æRÖ†V–v‡C£ãWĞ¤ÖVF–†Ö‚×v–GFƒ£S‚—²æf÷&Ò×&÷w¶w&–B×FV×ÆFRÖ6öÇVÖç3£g'×Ğ ¢ò¢dôõDU"¢ğ¦fö÷FW'¶&6¶w&÷VæC¢3CC¶6öÆ÷#§&v&ƒ#SRÃ#SRÃ#SRÂãSR“·FF–æs£"ãW&VÒãW&VÓ·FW‡BÖÆ–vã¦6VçFW'Ğ¢æfö÷FW"ÖÆ–æ·7¶F—7Æ“¦fÆWƒ¶§W7F–g’Ö6öçFVçC¦6VçFW#¶v£ã‡&VÓ¶fÆW‚×w&§w&¶Ö&v–âÖ&÷GFöÓ£ã'&V×Ğ¢æfö÷FW"ÖÆ–æ·2¶6öÆ÷#§&v&ƒ#SRÃ#SRÃ#SRÂãb“¶föçB×6—¦S¢ãƒ'&V×Ğ¢æfö÷FW"ÖF—66Æ–ÖW'¶föçB×6—¦S¢ãw&VÓ¶6öÆ÷#§&v&ƒ#SRÃ#SRÃ#SRÂã2“¶Ö‚×v–GFƒ£sƒ¶Ö&v–ã£&VÒWFò¶Æ–æRÖ†V–v‡C£ãgĞ ¢ò¢t„E4¢ğ¢çvÖ'V&&ÆW·÷6—F–öã¦f—†VC¶&÷GFöÓ£ãW&VÓ·&–v‡C£ãW&VÓ·¢Ö–æFWƒ£““—Ğ¢çvÖ'V&&ÆR¶&6¶w&÷VæC¢3#VC3cc¶6öÆ÷#¢6ffc·FF–æs¢ãw&VÒã7&VÓ¶&÷&FW"×&F—W3£Sƒ¶föçB×vV–v‡C£s¶föçB×6—¦S¢ãƒ‡&VÓ¶F—7Æ“¦fÆWƒ¶Æ–vâÖ—FV×3¦6VçFW#¶v¢ãW&VÓ¶&÷‚×6†F÷s£G‚#‚&v&ƒ3rÃ#Ã"ÂãB“¶æ–ÖF–öã§VÇ6R"ãW2–æf–æ—FWĞ¤¶W–g&ÖW2VÇ6W³RÃW¶&÷‚×6†F÷s£G‚#‚&v&ƒ3rÃ#Ã"ÂãB—ÓSW¶&÷‚×6†F÷s£g‚#‡‚&v&ƒ3rÃ#Ã"ÂãcR—×Ğ£Â÷7G–ÆSà£Âö†VCà£Æ&öG“à£ÆæcãÇ7â6Æ73Ò&æbÖ'&æB#ä¶G¦Vå66‡WG¢Ö–W¢fÖ–FF÷C²&&ÖVæ–v÷F†W#Â÷7ããÆF—b6Æ73Ò&æbÖÆ–æ·2#ãÆ‡&VcÒ"77¦Væ&–Vâ#ä¶÷7FVæ&V—7–VÆSÂöãÆ‡&VcÒ"7fW&vÆV–6‚#åF&–fSÂöãÆ‡&VcÒ"6æg&vR#ä&W&GVæsÂöãÂöF—cãÆ‡&VcÒ&‡GG3¢ò÷76Âæ&&ÖVæ–æFRööæÆ–æR×fW'6–6†W&âò2÷F–W'fW'6–6†W'Værô&V—G&s÷F–W&'CÔ¶G¦RgfW'6–6†W'VæsÖ·bfFÓÓƒ""F&vWCÒ%ö&Ææ²"6Æ73Ò&'FâÖæb#ä&V—G&r&W&V6†VæVãÂöãÂöæcãÇ6V7F–öâ–CÒ&†W&ò#ãÆF—b6Æ73Ò&†W&òÖ–ææW"#ãÆƒäFV–æR¶G¦RvV‚f÷VÖÃ·'B§W"fÖ–Æ–RãÆ'#å66‚gWVÖÃ·G¢6–RÂ&Wf÷"FW"W&ç7FfÆÂ¶öÖ×BãÂöƒãÇåF–W&'§F¶÷7FVâbgWVÖÃ·"¶G¦Vâ²f÷VÖÃ¶ææVâ66†æVÆÂÖV‡&W&RFW6VæBWW&ò¶÷7FVâfæF6ƒ²ögBö†æRf÷'v&çVærâ–6‚†VÆfRF—"ÂFVâ&–6‡F–vVâ66‡WG¢§Rf–æFVã¢fW'7BfVÖÃ¶æFÆ–6‚ÂW'2f÷VÖÃ¶æÆ–6‚Âö†æRF&–f6†÷2ãÂ÷ãÆF—b6Æ73Ò&†W&òÖ'Fç2#ãÆ‡&VcÒ&‡GG3¢ò÷76Âæ&&ÖVæ–æFRööæÆ–æR×fW'6–6†W&âò2÷F–W'fW'6–6†W'Værô&V—G&s÷F–W&'CÔ¶G¦RgfW'6–6†W'VæsÖ·bfFÓÓƒ""F&vWCÒ%ö&Ææ²"6Æ73Ò&'Fâ×&–Ö'’#ä¦WG§B¶÷7FVæÆ÷2&V—G&r&W&V6†æVãÂöãÆ‡&VcÒ"6æg&vR"6Æ73Ò&'Fâ×6V6öæF'’#åW'2f÷VÖÃ¶æÆ–6†R&W&GVæsÂöãÂöF—cãÆF—b6Æ73Ò&†W&òÖ&FvW2#ãÇ7â6Æ73Ò&†W&òÖ&FvR#ä¶V–æRfW'7FV6·FVâ¶÷7FVãÂ÷7ããÇ7â6Æ73Ò&†W&òÖ&FvR#åW'2f÷VÖÃ¶æÆ–6†Rç7&V6‡W'6öãÂ÷7ããÇ7â6Æ73Ò&†W&òÖ&FvR#äF—&V·BöæÆ–æR'66†Æ–Rg7¦Æ–s¶VãÂ÷7ããÂöF—cãÂöF—cãÂ÷6V7F–öããÇ6V7F–öâ–CÒ'fW'G&VVâ"7G–ÆSÒ&&6¶w&÷VæC¢6cvc6fc·FF–æs£ã‡&VÒãW&VÓ¶&÷&FW"Ö&÷GFöÓ£‚6öÆ–B6S†CVfb#ãÆF—b6Æ73Ò'G'W7B×w&#ãÇ6Æ73Ò'G'W7BÖÆ&VÂ#äW6vW¦V–6†æWBf×²&WvW'FWCÂ÷ãÆF—b6Æ73Ò'G'W7BÖ6&G2#ãÆ‡&VcÒ&‡GG3¢ò÷wwræV—6&V×F&VÆÆRæFRö¶G¦R"F&vWCÒ%ö&Ææ²"6Æ73Ò'G'W7BÖ6&B"7G–ÆSÒ&&÷&FW#£'‚6öÆ–B6cV3S‚#ãÇ7â6Æ73Ò'G'W7B×Fr"7G–ÆSÒ&&6¶w&÷VæC¢3&R#åDU5E4”TU </span><span class="trust-num" style="color:#1a1a2e">Platz 1</span><span class="trust-title">EisbaumTabelle</span><span class="trust-sub">Katzenkrankenversicherung</span></a><div class="trust-card" style="border:2px solid #4ade80"><span class="trust-tag" style="background:#16a34a">BESTES ERGEBNIS</span><span class="trust-num" style="color:#16a34a">98 %</span><span class="trust-title">&Oslash;-Erstattung</span><span class="trust-sub">Barmenia Premium Plus</span></div><a href="https://g.page/r/CZ_BYAxxpUq7EAE/review" target="_blank" class="trust-card" style="border:2px solid #4285f4"><span class="trust-tag" style="background:#4285f4">GOOGLE</span><span class="trust-num" style="font-size:1rem;color:#fbbc04">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="trust-title" style="color:#4285f4">5,0 &middot; 5 Bewertungen</span><span class="trust-sub">Bewertung schreiben</span></a></div></div></section>ch">
+  <div class="container">
+    <p class="section-label">KV oder OP-Schutz?</p>
+    <h2>Welcher Schutz passt zu deiner Katze?</h2>
+    <p class="section-sub">Beide Varianten bieten echten Schutz &ndash; die richtige Wahl h&auml;ngt von deiner Katze, deinem Budget und deinem Sicherheitsbed&uuml;rfnis ab.</p><div class="tarif-grid"><div class="tarif-card featured"><span class="tarif-badge-pill">Empfohlen &middot; Katzenkrankenversicherung</span><div style="font-size:.82rem;color:#666;margin-bottom:.3rem">Schon ab</div><div class="tarif-price">14,84 &euro; <span>/Monat</span></div><div class="tarif-note">inkl. 20&nbsp;% Selbstbeteiligung (max. 250&nbsp;&euro;)</div><ul class="tarif-features"><li>Unbegrenzte Leistungssumme</li><li>Bis 4-fache GOT</li><li>Keine Wartezeit bei Unf&auml;llen</li><li>Zahnextraktionen &amp; Wurzelbehandlungen</li><li>Nachbehandlungen bis 30 Tage nach OP</li></ul><a href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&versicherung=kv&adm=00011802" target="_blank" class="btn-tarif">Jetzt abschlie&szlig;en</a></div><div class="tarif-card"><span class="tarif-badge-pill" style="background:#555">Katzen-OP-Schutz</span><div style="font-size:.82rem;color:#666;margin-bottom:.3rem">G&uuml;nstiger Einstieg</div><div class="tarif-price" style="font-size:1.5rem">Operationsschutz</div><div class="tarif-note">Fokus auf Operationskosten</div><ul class="tarif-features"><li>Absicherung von Operationskosten</li><li>Narkose und station&auml;re OP-Behandlung</li><li>G&uuml;nstigerer Monatsbeitrag</li><li>Sinnvoll f&uuml;r junge, gesunde Katzen</li></ul><a href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&versicherung=op&adm=00011802" target="_blank" class="btn-tarif outline">Beitrag berechnen</a></div></div><p class="tarif-warn">Bekannte Vorerkrankungen und bereits angeratene Behandlungen m&uuml;ssen beim Antrag vollst&auml;ndig angegeben werden. Bei Unsicherheiten &ndash; melde dich bei mir.</p></div></section><section id="bewertungen"><div class="container"><div class="reviews-header"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span style="font-size:1.1rem;font-weight:800">Google Bewertungen</span></div><div class="reviews-score"><div class="score-num">5,0</div><div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="score-sub">basierend auf 5 Bewertungen</div></div></div><div class="reviews-scroll"><div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">&bdquo;Sehr kompetente und freundliche Beratung. Luca hat alles verst&auml;ndlich erkl&auml;rt und mir geholfen, den richtigen Schutz f&uuml;r meine Katze zu finden.&ldquo;</p><div class="review-author">&mdash; Google-Nutzer</div></div><div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">&bdquo;Tolle Beratung! Schnell, unkompliziert und wirklich pers&ouml;nlich. Kann ich nur weiterempfehlen.&ldquo;</p><div class="review-author">&mdash; Google-Nutzer</div></div><div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">&bdquo;Endlich jemand, der Versicherungen einfach erkl&auml;rt. Sehr empfehlenswert!&ldquo;</p><div class="review-author">&mdash; Google-Nutzer</div></div><div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">&bdquo;Super netter Kontakt, schnelle R&uuml;ckmeldung und klare Empfehlung. Danke!&ldquo;</p><div class="review-author">&mdash; Google-Nutzer</div></div><div class="review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">&bdquo;Professionell, ehrlich und immer erreichbar. Gerne wieder!&ldquo;</p><div class="review-author">&mdash; Google-Nutzer</div></div></div><div class="reviews-cta"><a href="https://g.page/r/CZ_BYAxxpUq7EAE/review" target="_blank" class="btn-google">Jetzt Bewertung schreiben</a></div></div></section><section id="schritte"><div class="container"><p class="section-label">So l&auml;uft es ab</p><h2>In 6 Schritten zur Absicherung</h2><div class="schritte-grid"><div class="schritt"><div class="schritt-num">1</div><h3>Anfrage stellen</h3><p>Kurzes Formular, 3 Minuten</p></div><div class="schritt"><div class="schritt-num">2</div><h3>Katzendaten</h3><p>Rasse, Alter, Gesundheit</p></div><div class="schritt"><div class="schritt-num">3</div><h3>Einsch&auml;tzung</h3><p>Pers&ouml;nliche Empfehlung</p></div><div class="schritt"><div class="schritt-num">4</div><h3>Schutz w&auml;hlen</h3><p>KV oder OP</p></div><div class="schritt"><div class="schritt-num">5</div><h3>Online abschlie&szlig;en</h3><p>Direkt &uuml;ber meinen Link</p></div><div class="schritt"><div class="schritt-num">6</div><h3>Weiter begleitet</h3><p>Ich bin weiter f&uuml;r dich da</p></div></div></div></section><section id="anfrage"><div class="container"><p class="section-label">Katzen-Schutz-Check starten</p><h2>Kbestenlose pers&ouml;nliche Beratung</h2><p class="section-sub">F&uuml;ll das Formular aus &ndash; ich melde mich zeitnah pers&ouml;nlich bei dir.</p><div class="form-wrap"><form action="https://formspree.io/f/xpqnvjzw" method="POST"><p class="form-section-title">Deine Kontaktdaten</p><div class="form-row"><div class="form-group"><label>Vorname *</label><input type="text" name="vorname" required></div><div class="form-group"><label>Nachname *</label><input type="text" name="nachname" required></div></div><div class="form-row"><div class="form-group"><label>Telefonnummer *</label><input type="tel" name="telefon" required></div><div class="form-group"><label>E-Mail *</label><input type="email" name="email" required></div></div><p class="form-section-title">Deine Katze</p><div class="form-row"><div class="form-group"><label>Name der Katze *</label><input type="text" name="katze_name" required></div><div class="form-group"><label>Rasse *</label><input type="text" name="rasse" required></div></div><div class="form-row"><div class="form-group"><label>Alter / Geburtsdatum *</label><input type="text" name="alter" required></div><div class="form-group"><label>Freig&auml;ner oder Wohnungskatze?</label><select name="typ"><option>Bitte w&auml;hlen</option><option>Wohnungskatze</option><option>Freil&auml;ufer</option><option>Beides</option></select></div></div><div class="form-group"><label>Bekannte Vorerkrankungen? *</label><select name="vorerkrankungen" required><option>Bitte w&auml;hlen</option><option>Nein</option><option>Ja</option></select></div><p class="form-section-title">Dein Wunsch</p><div class="form-group"><label>Was interessiert dich? *</label><select name="interesse" required><option>Bitte w&auml;hlen</option><option>Katzenkrankenversicherung (Vollschutz)</option><option>Katzen-OP-Schutz</option><option>Unsicher &ndash; bitte beraten</option></select></div><div class="form-group"><label>Pittere Infos / Anmerkungen</label><textarea name="anmerkungen"></textarea></div><button type="submit" class="btn-submit">Beratung starten &ndash; kostenlos &amp; unverbindlich</button><p class="form-disclaimer">Deine Daten werden ausschlie&szlig;lich zur Bearbeitung deiner Anfrage verwendet.</p></form></div></div></section><footer><div class="footer-links"><a href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&versicherung=kv&adm=00011802" target="_blank">Katzenkrankenversicherung</a><a href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&versicherung=op&adm=00011802" target="_blank">Katzen-OP-Schutz</a><a href="mailto:ambos.luca@gmail.com">E-Mail</a><a href="https://wa.me/4917679552698">WhatsApp</a><a href="https://g.page/r/CZ_BYAxxpUq7EAE/review" target="_blank">Google Bewertung</a></div><p class="footer-disclaimer">Diese Seite vermittelt offizielle Versicherungsprodukte der BarmeniaGothaer. Luca Ambos ist autorisierter Vermittler. Ma&szlig;geblichf&uuml;r Leistung und Bedingungen sind die aktuellen Versicherungsbedingungen der BarmeniaGothaer.</p></footer><div class="wa-bubble"><a href="https://wa.me/4917679552698" target="_blank">WhatsApp schreiben</a></div></body></html>
