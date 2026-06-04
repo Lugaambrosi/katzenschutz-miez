@@ -4,139 +4,178 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KatzenSchutz Miez – Katzenkrankenversicherung mit Luca Ambos</title>
-<meta name="description" content="Katzenkrankenversicherung und Katzen-OP-Schutz der BarmeniaGothaer. Persönliche Beratung durch Luca Ambos, Berlin. EisbaumTabelle Testsieger 2026.">
+<meta name="description" content="Katzenkrankenversicherung und Katzen-OP-Schutz der BarmeniaGothaer ab 14,84 €/Monat. Persönliche Beratung durch Luca Ambos, Berlin. EisbaumTabelle Testsieger 2026.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a2e;background:#fff}
 a{text-decoration:none}
 img{max-width:100%;display:block}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:100;background:#1a1a2e;padding:.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.nav-brand{color:#fff;font-weight:800;font-size:.95rem;white-space:nowrap}
+nav{position:sticky;top:0;z-index:100;background:rgba(18,16,31,.96);backdrop-filter:blur(8px);padding:.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap}
 .nav-links{display:flex;gap:1.2rem}
 .nav-links a{color:rgba(255,255,255,.8);font-size:.85rem}
 .nav-links a:hover{color:#fff}
-.btn-nav{background:#7c3aed;color:#fff;padding:.5rem 1.1rem;border-radius:8px;font-weight:700;font-size:.85rem;white-space:nowrap}
-@media(max-width:640px){.nav-links{display:none}}
+.btn-nav{background:#7c3aed;color:#fff;padding:.55rem 1.2rem;border-radius:30px;font-weight:700;font-size:.85rem;white-space:nowrap}
+@media(max-width:760px){.nav-links{display:none}}
 
-/* HERO */
-#hero{background:linear-gradient(160deg,#0f0c29,#302b63,#24243e);min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 1.5rem;position:relative;overflow:hidden}
-.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;z-index:0}
-.hero-inner{max-width:720px;position:relative;z-index:1}
-.hero-inner h1{font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:1.2rem}
-.hero-inner p{color:rgba(255,255,255,.82);font-size:1.05rem;margin-bottom:2rem;line-height:1.7}
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:#7c3aed;color:#fff;padding:1rem 2.2rem;border-radius:10px;font-weight:800;font-size:1rem;display:inline-block}
+/* HERO – Vollbild-Video */
+#hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:4rem 1.5rem;overflow:hidden}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,12,41,.92) 0%,rgba(15,12,41,.78) 45%,rgba(15,12,41,.35) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:1040px;margin:0 auto;width:100%}
+.hero-content{max-width:620px}
+.hero-kicker{display:inline-flex;align-items:center;gap:.5rem;background:rgba(124,58,237,.25);border:1px solid rgba(167,139,250,.5);color:#e9e2ff;font-size:.78rem;font-weight:700;padding:.4rem 1rem;border-radius:30px;margin-bottom:1.2rem}
+.hero-content h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:1.1rem}
+.hero-content h1 em{font-style:normal;color:#c4b5fd}
+.hero-sub{color:rgba(255,255,255,.88);font-size:1.05rem;line-height:1.7;margin-bottom:1.4rem}
+.hero-checks{list-style:none;margin-bottom:1.6rem}
+.hero-checks li{color:#fff;font-size:.95rem;font-weight:600;padding:.32rem 0 .32rem 1.9rem;position:relative}
+.hero-checks li::before{content:'✓';position:absolute;left:0;top:.32rem;width:1.35rem;height:1.35rem;background:#22c55e;color:#fff;border-radius:50%;font-size:.8rem;font-weight:900;display:flex;align-items:center;justify-content:center}
+.hero-price{display:flex;align-items:baseline;gap:.6rem;margin-bottom:1.6rem;flex-wrap:wrap}
+.hero-price .ab{color:rgba(255,255,255,.75);font-size:.95rem}
+.hero-price .betrag{color:#fff;font-size:2.4rem;font-weight:900}
+.hero-price .monat{color:rgba(255,255,255,.75);font-size:.95rem}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn-primary{background:#7c3aed;color:#fff;padding:1rem 2.2rem;border-radius:30px;font-weight:800;font-size:1rem;display:inline-block;box-shadow:0 8px 24px rgba(124,58,237,.45)}
 .btn-primary:hover{background:#6d28d9}
-.btn-secondary{background:rgba(255,255,255,.1);color:#fff;padding:1rem 1.6rem;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid rgba(255,255,255,.25);display:inline-block}
-.hero-badges{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:1.8rem}
-.hero-badge{background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);padding:.4rem .9rem;border-radius:20px;font-size:.75rem;border:1px solid rgba(255,255,255,.15)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;padding:1rem 1.7rem;border-radius:30px;font-weight:700;font-size:.95rem;border:1px solid rgba(255,255,255,.3);display:inline-block}
+
+/* TRUST BAR */
+#trustbar{background:#12101f;padding:1.4rem 1.5rem}
+.trustbar-inner{max-width:1040px;margin:0 auto;display:flex;gap:1rem;justify-content:space-between;flex-wrap:wrap}
+.tb-item{display:flex;align-items:center;gap:.7rem;color:rgba(255,255,255,.9);font-size:.85rem;line-height:1.4}
+.tb-item .tb-big{font-weight:900;color:#fff}
+.tb-icon{font-size:1.4rem}
+.tb-stars{color:#fbbc04;letter-spacing:.05em}
 
 /* SECTIONS */
-section{padding:3.5rem 1.5rem}
-.container{max-width:960px;margin:0 auto}
-.section-label{font-size:.65rem;color:#7c3aed;letter-spacing:.14em;font-weight:700;text-align:center;text-transform:uppercase;margin-bottom:.6rem}
-h2{font-size:1.75rem;font-weight:800;color:#1a1a2e;text-align:center;margin-bottom:.6rem;line-height:1.2}
-.section-sub{font-size:.95rem;color:#666;text-align:center;margin-bottom:2.5rem;max-width:600px;margin-left:auto;margin-right:auto}
+section{padding:4rem 1.5rem}
+.container{max-width:1040px;margin:0 auto}
+.section-label{font-size:.68rem;color:#7c3aed;letter-spacing:.16em;font-weight:800;text-align:center;text-transform:uppercase;margin-bottom:.6rem}
+h2{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:#1a1a2e;text-align:center;margin-bottom:.7rem;line-height:1.25}
+.section-sub{font-size:.97rem;color:#666;text-align:center;margin-bottom:2.6rem;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.65}
 
-/* FOTOLEISTE */
-#fotos{padding:0}
-.foto-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.foto-strip img{width:100%;height:220px;object-fit:cover}
-@media(max-width:640px){.foto-strip{grid-template-columns:repeat(2,1fr)}.foto-strip img{height:150px}}
-
-/* TRUST */
-#trust{background:#f7f5ff;padding:2.5rem 1.5rem}
-.trust-grid{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}
-.trust-card{background:#fff;border:1px solid #e8e3f8;border-radius:14px;padding:1.4rem 1.8rem;text-align:center;min-width:240px;box-shadow:0 2px 10px rgba(124,58,237,.06)}
-.trust-card .big{font-size:1.6rem;font-weight:900;color:#7c3aed}
-.trust-card .small{font-size:.8rem;color:#666;margin-top:.3rem;line-height:1.5}
-.stars{color:#fbbc04;font-size:1.1rem;letter-spacing:.1em}
-
-/* WARUM */
+/* KOSTEN / WARUM */
+#kosten{background:#f8f7fc}
 .cards-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
-.card{background:#fff;border:1px solid #eee;border-radius:14px;padding:1.6rem;box-shadow:0 2px 12px rgba(0,0,0,.04)}
-.card .icon{font-size:1.6rem;margin-bottom:.7rem}
+.card{background:#fff;border:1px solid #ece9f6;border-radius:16px;padding:1.6rem;box-shadow:0 3px 14px rgba(26,26,46,.05)}
+.card .icon{font-size:1.7rem;margin-bottom:.7rem}
 .card h3{font-size:1.05rem;font-weight:800;margin-bottom:.5rem}
 .card p{font-size:.88rem;color:#555;line-height:1.65}
+.kosten-tabelle{margin-top:2.2rem;background:#fff;border:1px solid #ece9f6;border-radius:16px;padding:1.6rem;box-shadow:0 3px 14px rgba(26,26,46,.05)}
+.kosten-tabelle h3{font-size:1rem;font-weight:800;margin-bottom:1rem;text-align:center}
+.kosten-row{display:flex;justify-content:space-between;align-items:center;padding:.7rem .2rem;border-bottom:1px solid #f1eff8;font-size:.9rem}
+.kosten-row:last-child{border-bottom:none}
+.kosten-row .kr-name{color:#333;font-weight:600}
+.kosten-row .kr-preis{color:#7c3aed;font-weight:800;white-space:nowrap}
+.kosten-fussnote{font-size:.75rem;color:#999;margin-top:.9rem;text-align:center;line-height:1.5}
+
+/* LEISTUNGEN */
+.leistungen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem;max-width:900px;margin:0 auto}
+.leistung-block{background:#1a1a2e;border-radius:18px;padding:1.8rem;color:#fff}
+.leistung-block.hell{background:#f3efff;color:#1a1a2e}
+.leistung-block h3{font-size:1.05rem;font-weight:800;margin-bottom:1rem}
+.leistung-block.hell h3{color:#5b21b6}
+.leistung-block ul{list-style:none}
+.leistung-block li{font-size:.89rem;padding:.4rem 0 .4rem 1.7rem;position:relative;line-height:1.55;color:rgba(255,255,255,.88)}
+.leistung-block.hell li{color:#444}
+.leistung-block li::before{content:'✓';position:absolute;left:0;color:#22c55e;font-weight:900}
+.leistung-block li strong{color:#fff}
+.leistung-block.hell li strong{color:#1a1a2e}
+
+/* VERGLEICH */
+#vergleich{background:#f8f7fc}
+.vergleich-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.4rem;max-width:860px;margin:0 auto}
+.plan{border:2px solid #ece9f6;border-radius:18px;padding:1.9rem;position:relative;background:#fff}
+.plan.empfohlen{border-color:#7c3aed;box-shadow:0 10px 30px rgba(124,58,237,.14)}
+.plan-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#7c3aed;color:#fff;font-size:.7rem;font-weight:800;padding:.32rem 1rem;border-radius:20px;white-space:nowrap}
+.plan h3{font-size:1.12rem;font-weight:800;margin-bottom:.3rem}
+.plan .preis{font-size:2.1rem;font-weight:900;color:#1a1a2e;margin:.6rem 0 .2rem}
+.plan .preis span{font-size:.85rem;font-weight:600;color:#777}
+.plan .preis-sub{font-size:.78rem;color:#888;margin-bottom:1rem}
+.plan ul{list-style:none;margin:1rem 0 1.5rem}
+.plan li{font-size:.88rem;color:#444;padding:.35rem 0 .35rem 1.5rem;position:relative;line-height:1.5}
+.plan li::before{content:'✓';position:absolute;left:0;color:#7c3aed;font-weight:800}
+.plan .btn-primary{width:100%;text-align:center;font-size:.93rem;padding:.9rem;border-radius:12px;box-shadow:none}
+.plan .btn-outline{display:block;text-align:center;border:2px solid #7c3aed;color:#7c3aed;font-weight:800;padding:.8rem;border-radius:12px;font-size:.93rem}
+.hinweis{max-width:740px;margin:1.8rem auto 0;font-size:.8rem;color:#777;text-align:center;line-height:1.6;background:#fff;border:1px solid #ece9f6;border-radius:12px;padding:1rem 1.3rem}
 
 /* ÜBER MICH */
-#ueber{background:#1a1a2e}
+#ueber{background:#12101f}
 #ueber .section-label{color:#a78bfa}
 #ueber h2{color:#fff}
-.ueber-grid{display:grid;grid-template-columns:280px 1fr;gap:2.5rem;align-items:center;max-width:860px;margin:0 auto}
-.ueber-grid img{border-radius:16px;width:100%;height:340px;object-fit:cover}
-.ueber-text p{color:rgba(255,255,255,.82);font-size:.95rem;line-height:1.75;margin-bottom:1rem}
+.ueber-grid{display:grid;grid-template-columns:300px 1fr;gap:2.5rem;align-items:center;max-width:880px;margin:0 auto}
+.ueber-grid img{border-radius:18px;width:100%;height:360px;object-fit:cover}
+.ueber-text p{color:rgba(255,255,255,.85);font-size:.96rem;line-height:1.75;margin-bottom:1rem}
 .ueber-text strong{color:#fff}
+.ueber-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.3rem}
+.btn-wa{background:#25d366;color:#fff;padding:.75rem 1.4rem;border-radius:30px;font-weight:800;font-size:.88rem;display:inline-block}
+.btn-mail{background:rgba(255,255,255,.12);color:#fff;padding:.75rem 1.4rem;border-radius:30px;font-weight:700;font-size:.88rem;border:1px solid rgba(255,255,255,.3);display:inline-block}
 @media(max-width:700px){.ueber-grid{grid-template-columns:1fr}}
 
 /* SZENARIEN */
-#szenarien{background:#f9f9fb}
 .szen-card{overflow:hidden;padding:0}
-.szen-card img{height:190px;width:100%;object-fit:cover}
+.szen-card img{height:200px;width:100%;object-fit:cover}
 .szen-body{padding:1.4rem}
 .szen-body h3{font-size:1rem;font-weight:800;margin-bottom:.5rem}
 .szen-body p{font-size:.87rem;color:#555;line-height:1.65}
 .szen-cost{margin-top:.8rem;font-size:.85rem;font-weight:800;color:#7c3aed}
 
-/* VERGLEICH */
-.vergleich-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.4rem;max-width:820px;margin:0 auto}
-.plan{border:2px solid #eee;border-radius:16px;padding:1.8rem;position:relative;background:#fff}
-.plan.empfohlen{border-color:#7c3aed;box-shadow:0 6px 24px rgba(124,58,237,.12)}
-.plan-tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#7c3aed;color:#fff;font-size:.7rem;font-weight:800;padding:.3rem .9rem;border-radius:20px;white-space:nowrap}
-.plan h3{font-size:1.1rem;font-weight:800;margin-bottom:.3rem}
-.plan .preis{font-size:2rem;font-weight:900;color:#1a1a2e;margin:.6rem 0 .2rem}
-.plan .preis span{font-size:.85rem;font-weight:600;color:#777}
-.plan .preis-sub{font-size:.78rem;color:#888;margin-bottom:1rem}
-.plan ul{list-style:none;margin:1rem 0 1.4rem}
-.plan li{font-size:.87rem;color:#444;padding:.35rem 0 .35rem 1.5rem;position:relative;line-height:1.5}
-.plan li::before{content:'✓';position:absolute;left:0;color:#7c3aed;font-weight:800}
-.plan .btn-primary{width:100%;text-align:center;font-size:.92rem;padding:.85rem}
-.plan .btn-outline{display:block;text-align:center;border:2px solid #7c3aed;color:#7c3aed;font-weight:800;padding:.75rem;border-radius:10px;font-size:.92rem}
-.hinweis{max-width:720px;margin:1.8rem auto 0;font-size:.8rem;color:#777;text-align:center;line-height:1.6;background:#f7f5ff;border-radius:10px;padding:.9rem 1.2rem}
-
 /* REVIEWS */
-#reviews{background:#f9f9fb}
+#reviews{background:#f8f7fc}
 .review-head{text-align:center;margin-bottom:2rem}
-.review-head .score{font-size:2.6rem;font-weight:900}
+.review-head .score{font-size:2.8rem;font-weight:900}
+.stars{color:#fbbc04;font-size:1.1rem;letter-spacing:.1em}
 .review-track{display:flex;gap:1rem;overflow-x:auto;padding:.5rem .2rem 1rem;scroll-snap-type:x mandatory}
-.review-card{min-width:270px;max-width:270px;background:#fff;border:1px solid #eee;border-radius:14px;padding:1.3rem;scroll-snap-align:start;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.review-card{min-width:280px;max-width:280px;background:#fff;border:1px solid #ece9f6;border-radius:16px;padding:1.4rem;scroll-snap-align:start;box-shadow:0 3px 12px rgba(26,26,46,.05)}
 .review-card .stars{font-size:.95rem;margin-bottom:.6rem}
-.review-card p{font-size:.85rem;color:#444;line-height:1.6;margin-bottom:.7rem}
+.review-card p{font-size:.86rem;color:#444;line-height:1.6;margin-bottom:.7rem}
 .review-card .autor{font-size:.78rem;color:#888;font-weight:600}
-.review-cta{text-align:center;margin-top:1.5rem}
+.review-cta{text-align:center;margin-top:1.6rem}
 
-/* SCHRITTE */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;max-width:900px;margin:0 auto}
+/* ABLAUF */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;max-width:920px;margin:0 auto}
 .step{text-align:center;padding:1.2rem .8rem}
-.step .num{width:42px;height:42px;border-radius:50%;background:#7c3aed;color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto .7rem;font-size:1.05rem}
+.step .num{width:44px;height:44px;border-radius:50%;background:#7c3aed;color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto .7rem;font-size:1.05rem}
 .step h3{font-size:.9rem;font-weight:800;margin-bottom:.3rem}
 .step p{font-size:.78rem;color:#777;line-height:1.5}
 
+/* FAQ */
+#faq{background:#f8f7fc}
+.faq-list{max-width:740px;margin:0 auto}
+details{background:#fff;border:1px solid #ece9f6;border-radius:14px;margin-bottom:.8rem;overflow:hidden}
+summary{cursor:pointer;font-weight:700;font-size:.95rem;padding:1.1rem 3rem 1.1rem 1.3rem;list-style:none;position:relative;color:#1a1a2e}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';position:absolute;right:1.2rem;top:50%;transform:translateY(-50%);font-size:1.4rem;font-weight:400;color:#7c3aed;transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq-a{padding:0 1.3rem 1.2rem;font-size:.89rem;color:#555;line-height:1.7}
+
 /* FORMULAR */
-#kontakt{background:#1a1a2e}
+#kontakt{background:#12101f}
 #kontakt .section-label{color:#a78bfa}
 #kontakt h2{color:#fff}
 #kontakt .section-sub{color:rgba(255,255,255,.7)}
-form{max-width:640px;margin:0 auto;background:#fff;border-radius:18px;padding:2rem}
+form{max-width:660px;margin:0 auto;background:#fff;border-radius:20px;padding:2.2rem}
 .form-block{margin-bottom:1.4rem}
 .form-block-title{font-size:.7rem;font-weight:800;color:#7c3aed;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.8rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
 @media(max-width:560px){.form-row{grid-template-columns:1fr}}
 label{display:block;font-size:.8rem;font-weight:700;margin-bottom:.3rem;color:#333}
-input,select,textarea{width:100%;padding:.7rem .9rem;border:1px solid #ddd;border-radius:9px;font-size:.9rem;font-family:inherit;margin-bottom:.9rem;background:#fff;color:#1a1a2e}
+input,select,textarea{width:100%;padding:.72rem .9rem;border:1px solid #ddd;border-radius:10px;font-size:.9rem;font-family:inherit;margin-bottom:.9rem;background:#fff;color:#1a1a2e}
 input:focus,select:focus,textarea:focus{outline:2px solid #7c3aed;border-color:transparent}
-button[type=submit]{width:100%;background:#7c3aed;color:#fff;border:none;padding:1rem;border-radius:10px;font-weight:800;font-size:1rem;cursor:pointer}
+button[type=submit]{width:100%;background:#7c3aed;color:#fff;border:none;padding:1.05rem;border-radius:30px;font-weight:800;font-size:1rem;cursor:pointer}
 button[type=submit]:hover{background:#6d28d9}
 .form-note{font-size:.75rem;color:#888;text-align:center;margin-top:.8rem}
 
 /* FOOTER */
-footer{background:#12101f;color:rgba(255,255,255,.65);padding:2.5rem 1.5rem;text-align:center;font-size:.82rem}
+footer{background:#0d0b18;color:rgba(255,255,255,.65);padding:2.6rem 1.5rem;text-align:center;font-size:.82rem}
 .footer-links{display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.4rem}
 .footer-links a{color:rgba(255,255,255,.8);font-weight:600}
 .footer-links a:hover{color:#fff}
-footer .legal{max-width:640px;margin:0 auto;line-height:1.7;font-size:.75rem;color:rgba(255,255,255,.45)}
+footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;color:rgba(255,255,255,.45)}
 
 /* WHATSAPP BUBBLE */
 .wa-bubble{position:fixed;bottom:1.4rem;right:1.4rem;z-index:200;background:#25d366;color:#fff;font-weight:800;font-size:.88rem;padding:.85rem 1.3rem;border-radius:30px;box-shadow:0 6px 20px rgba(37,211,102,.4);display:flex;align-items:center;gap:.5rem}
@@ -148,83 +187,158 @@ footer .legal{max-width:640px;margin:0 auto;line-height:1.7;font-size:.75rem;col
 <nav>
   <a class="nav-brand" href="#hero">🐱 KatzenSchutz Miez</a>
   <div class="nav-links">
-    <a href="#warum">Warum</a>
+    <a href="#kosten">Tierarztkosten</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#vergleich">Tarife</a>
     <a href="#ueber">Über mich</a>
-    <a href="#vergleich">Vergleich</a>
     <a href="#reviews">Bewertungen</a>
-    <a href="#ablauf">Ablauf</a>
+    <a href="#faq">FAQ</a>
   </div>
   <a class="btn-nav" href="#kontakt">Kostenlose Beratung</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO: Vollbild-Video -->
 <section id="hero">
   <video class="hero-media" autoplay muted loop playsinline poster="katz_hero.jpg">
     <source src="hero.mp4" type="video/mp4">
   </video>
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <h1>Schütze deine Katze.<br>Bevor es teuer wird.</h1>
-    <p>Katzenkrankenversicherung &amp; OP-Schutz der BarmeniaGothaer – persönlich beraten von Luca Ambos. Damit eine Tierarztrechnung nie wieder über die Gesundheit deiner Katze entscheidet.</p>
-    <div class="hero-btns">
-      <a class="btn-primary" href="#kontakt">Jetzt kostenlos beraten lassen</a>
-      <a class="btn-secondary" href="#vergleich">Tarife vergleichen</a>
-    </div>
-    <div class="hero-badges">
-      <span class="hero-badge">🏆 EisbaumTabelle Platz 1 (2026)</span>
-      <span class="hero-badge">⭐ 5,0 bei Google</span>
-      <span class="hero-badge">💬 Persönliche Beratung</span>
-    </div>
-  </div>
-</section>
-
-<!-- FOTOLEISTE -->
-<section id="fotos">
-  <div class="foto-strip">
-    <img src="katz_hero.jpg" alt="Katze – KatzenSchutz Miez" loading="lazy">
-    <img src="katz_jung.jpg" alt="Junge Katze frühzeitig versichern" loading="lazy">
-    <img src="katz_3.jpg" alt="Gesunde, glückliche Katze" loading="lazy">
-    <img src="katz_postop.jpg" alt="Katze nach der OP gut versorgt" loading="lazy">
-  </div>
-</section>
-
-<!-- TRUST -->
-<section id="trust">
-  <div class="trust-grid">
-    <div class="trust-card">
-      <div class="big">Platz 1</div>
-      <div class="small"><strong>EisbaumTabelle 2026</strong><br>Katzenkrankenversicherung<br>Bestes Ergebnis: <strong>98&nbsp;%</strong> Ø-Erstattung<br>Barmenia Premium Plus</div>
-    </div>
-    <div class="trust-card">
-      <div class="stars">★★★★★</div>
-      <div class="big">5,0</div>
-      <div class="small">Google · 5 Bewertungen<br><a href="https://g.page/r/CZ_BYAxxpUq7EAE/review" style="color:#7c3aed;font-weight:700">Bewertung schreiben</a></div>
+    <div class="hero-content">
+      <span class="hero-kicker">🏆 EisbaumTabelle Platz 1 · 2026</span>
+      <h1>Nie wieder Angst vor der <em>Tierarztrechnung</em>.</h1>
+      <p class="hero-sub">Katzenkrankenversicherung der BarmeniaGothaer – mit persönlicher Beratung von Luca Ambos statt anonymer Hotline.</p>
+      <ul class="hero-checks">
+        <li>Unbegrenzte Leistungssumme – auch bei teuren OPs</li>
+        <li>Bis zum 4-fachen GOT-Satz, inkl. Notdienst</li>
+        <li>Zähne (FORL), rassespezifische Erkrankungen abgedeckt</li>
+        <li>Keine Wartezeit bei Unfällen</li>
+      </ul>
+      <div class="hero-price"><span class="ab">schon ab</span><span class="betrag">14,84 €</span><span class="monat">/ Monat</span></div>
+      <div class="hero-btns">
+        <a class="btn-primary" href="#kontakt">Jetzt kostenlos beraten lassen</a>
+        <a class="btn-ghost" href="https://wa.me/4917679552698" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- WARUM -->
-<section id="warum">
+<!-- TRUST BAR -->
+<div id="trustbar">
+  <div class="trustbar-inner">
+    <div class="tb-item"><span class="tb-icon">🏆</span><span><span class="tb-big">Platz 1 – EisbaumTabelle 2026</span><br>98 % Ø-Erstattung · Barmenia Premium Plus</span></div>
+    <div class="tb-item"><span class="tb-icon"><span class="tb-stars">★★★★★</span></span><span><span class="tb-big">5,0 bei Google</span><br><a href="https://g.page/r/CZ_BYAxxpUq7EAE/review" style="color:#a78bfa" target="_blank" rel="noopener">Bewertung schreiben</a></span></div>
+    <div class="tb-item"><span class="tb-icon">🛡️</span><span><span class="tb-big">Offizieller Vermittler</span><br>BarmeniaGothaer Versicherungen</span></div>
+    <div class="tb-item"><span class="tb-icon">💬</span><span><span class="tb-big">Persönliche Beratung</span><br>Kein Callcenter, keine Hotline</span></div>
+  </div>
+</div>
+
+<!-- TIERARZTKOSTEN -->
+<section id="kosten">
   <div class="container">
     <div class="section-label">Warum jetzt?</div>
     <h2>Tierarztkosten steigen – dein Risiko auch</h2>
-    <p class="section-sub">Seit der neuen Gebührenordnung für Tierärzte (GOT) sind Behandlungen deutlich teurer geworden. Eine einzige OP kann vierstellig kosten.</p>
+    <p class="section-sub">Seit der neuen Gebührenordnung für Tierärzte (GOT) rechnen Praxen bis zum 4-fachen Satz ab – im Notdienst sogar verpflichtend erhöht. Eine einzige Behandlung kann vierstellig werden.</p>
     <div class="cards-3">
       <div class="card">
         <div class="icon">💶</div>
-        <h3>Neue GOT seit 2022</h3>
-        <p>Tierärzte rechnen heute bis zum 4-fachen Satz ab. Im Notdienst sind erhöhte Sätze sogar verpflichtend. Routinebehandlungen kosten schnell das Doppelte von früher.</p>
+        <h3>Standard-Schutz reicht oft nicht</h3>
+        <p>Viele Tarife erstatten nur 60–80 % oder deckeln die Jahresleistung. Der Rest bleibt an dir hängen – ausgerechnet im Ernstfall.</p>
       </div>
       <div class="card">
-        <div class="icon">🏥</div>
-        <h3>OPs gehen ins Geld</h3>
-        <p>Beinbruch, Darmverschluss, Tumor-OP: 1.500 bis über 4.000&nbsp;€ sind keine Seltenheit. Ohne Schutz zahlst du alles selbst – und musst im Ernstfall schnell entscheiden.</p>
+        <div class="icon">🦷</div>
+        <h3>Zähne &amp; Rasse-Erkrankungen</h3>
+        <p>FORL, Wurzelbehandlungen oder rassetypische Erkrankungen schließen viele Versicherer aus. Bei der Barmenia sind sie mitversichert.</p>
       </div>
       <div class="card">
-        <div class="icon">🛡️</div>
-        <h3>Früh versichern lohnt sich</h3>
-        <p>Je jünger und gesünder deine Katze beim Abschluss ist, desto günstiger der Beitrag – und desto sicherer ist sie ein Leben lang geschützt.</p>
+        <div class="icon">⏱️</div>
+        <h3>Früh abschließen lohnt sich</h3>
+        <p>Je jünger und gesünder deine Katze beim Abschluss ist, desto günstiger der Beitrag – und Vorerkrankungen sind noch kein Thema.</p>
       </div>
     </div>
+    <div class="kosten-tabelle">
+      <h3>💸 Typische Behandlungskosten bei Katzen</h3>
+      <div class="kosten-row"><span class="kr-name">Not-OP nach verschlucktem Fremdkörper</span><span class="kr-preis">1.500 – 2.500 €</span></div>
+      <div class="kosten-row"><span class="kr-name">Behandlung nach Autounfall (Freigänger)</span><span class="kr-preis">2.000 – 4.000 €</span></div>
+      <div class="kosten-row"><span class="kr-name">Zahnsanierung / FORL unter Vollnarkose</span><span class="kr-preis">800 – 1.500 €</span></div>
+      <div class="kosten-row"><span class="kr-name">Tumor-OP inkl. Diagnostik (MRT/CT)</span><span class="kr-preis">1.500 – 3.500 €</span></div>
+      <div class="kosten-row"><span class="kr-name">Nachsorge: Medikamente, Kontrollen, Klinik</span><span class="kr-preis">oft mehrere hundert €</span></div>
+      <p class="kosten-fussnote">Richtwerte je nach Praxis, Region und GOT-Satz (1- bis 4-fach). Vor- und Nachbehandlungen kommen häufig hinzu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section id="leistungen">
+  <div class="container">
+    <div class="section-label">Das steckt drin</div>
+    <h2>Barmenia-Schutz mit starken Leistungen</h2>
+    <p class="section-sub">Der Tarif, der bei der EisbaumTabelle 2026 mit 98 % Ø-Erstattung auf Platz 1 steht – und das bekommst du dazu.</p>
+    <div class="leistungen-grid">
+      <div class="leistung-block">
+        <h3>🛡️ Versicherte Leistungen</h3>
+        <ul>
+          <li><strong>Unbegrenzte Leistungssumme</strong> – keine Jahres-Deckelung bei OPs</li>
+          <li>Erstattung bis zum <strong>4-fachen GOT-Satz</strong></li>
+          <li><strong>Zahnerkrankungen</strong> inkl. FORL, Extraktionen &amp; Wurzelbehandlungen</li>
+          <li><strong>Rassespezifische Erkrankungen</strong> – auch mehrfach</li>
+          <li>Diagnostik wie <strong>MRT, CT, Röntgen</strong> vor der OP</li>
+          <li><strong>Nachbehandlungen bis 30 Tage</strong> nach der OP</li>
+          <li>Keine Wartezeit bei <strong>Unfällen &amp; Vergiftungen</strong></li>
+        </ul>
+      </div>
+      <div class="leistung-block hell">
+        <h3>🤝 Dein Plus bei mir</h3>
+        <ul>
+          <li><strong>Persönlicher Ansprechpartner</strong> – vor und nach dem Abschluss</li>
+          <li><strong>Freie Tierarzt- und Klinikwahl</strong> in ganz Deutschland</li>
+          <li><strong>Weltweiter Schutz</strong> bei Auslandsaufenthalten bis 12 Monate</li>
+          <li>Ehrliche Einschätzung: <strong>KV oder OP-Schutz</strong> – was wirklich passt</li>
+          <li>Hilfe bei <strong>Erstattungen &amp; Rechnungen</strong> im Leistungsfall</li>
+          <li>Erreichbar per <strong>WhatsApp, Telefon oder E-Mail</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERGLEICH -->
+<section id="vergleich">
+  <div class="container">
+    <div class="section-label">KV oder OP-Schutz?</div>
+    <h2>Welcher Schutz passt zu deiner Katze?</h2>
+    <p class="section-sub">Beide Varianten bieten echten Schutz – die richtige Wahl hängt von deiner Katze, deinem Budget und deinem Sicherheitsbedürfnis ab.</p>
+    <div class="vergleich-grid">
+      <div class="plan empfohlen">
+        <div class="plan-tag">Empfohlen · EisbaumTabelle Platz 1</div>
+        <h3>Katzenkrankenversicherung</h3>
+        <div class="preis-sub">Schon ab</div>
+        <div class="preis">14,84 € <span>/Monat</span></div>
+        <div class="preis-sub">inkl. 20 % Selbstbeteiligung (max. 250 €)</div>
+        <ul>
+          <li>Unbegrenzte Leistungssumme</li>
+          <li>Bis 4-fache GOT</li>
+          <li>Keine Wartezeit bei Unfällen</li>
+          <li>Zahnextraktionen &amp; Wurzelbehandlungen</li>
+          <li>Nachbehandlungen bis 30 Tage nach OP</li>
+        </ul>
+        <a class="btn-primary" href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&amp;versicherung=kv&amp;adm=00011802" target="_blank" rel="noopener">Jetzt abschließen</a>
+      </div>
+      <div class="plan">
+        <h3>Katzen-OP-Schutz</h3>
+        <div class="preis-sub">Günstiger Einstieg</div>
+        <div class="preis" style="font-size:1.45rem;padding:.45rem 0">Operationsschutz</div>
+        <div class="preis-sub">Fokus auf Operationskosten</div>
+        <ul>
+          <li>Absicherung von Operationskosten</li>
+          <li>Narkose und stationäre OP-Behandlung</li>
+          <li>Günstigerer Monatsbeitrag</li>
+          <li>Sinnvoll für junge, gesunde Katzen</li>
+        </ul>
+        <a class="btn-outline" href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&amp;versicherung=op&amp;adm=00011802" target="_blank" rel="noopener">Beitrag berechnen</a>
+      </div>
+    </div>
+    <div class="hinweis">Bekannte Vorerkrankungen und bereits angeratene Behandlungen müssen beim Antrag vollständig angegeben werden. Bei Unsicherheiten – melde dich bei mir.</div>
   </div>
 </section>
 
@@ -240,6 +354,10 @@ footer .legal{max-width:640px;margin:0 auto;line-height:1.7;font-size:.75rem;col
         <p>Hi, ich bin <strong>Luca Ambos</strong> – autorisierter Vermittler der <strong>BarmeniaGothaer</strong> aus Berlin. Mein Fokus: Katzenkranken- und OP-Versicherungen, die im Ernstfall wirklich zahlen.</p>
         <p>Ich erkläre dir verständlich, was versichert ist und was nicht, helfe bei der Tarifwahl und bleibe auch <strong>nach dem Abschluss</strong> dein Ansprechpartner – ob bei Fragen zur Erstattung oder zu Rechnungen.</p>
         <p>Die Beratung ist <strong>kostenlos und unverbindlich</strong> – per Telefon, WhatsApp oder E-Mail.</p>
+        <div class="ueber-ctas">
+          <a class="btn-wa" href="https://wa.me/4917679552698" target="_blank" rel="noopener">💬 WhatsApp schreiben</a>
+          <a class="btn-mail" href="mailto:ambos.luca@gmail.com">✉️ E-Mail senden</a>
+        </div>
       </div>
     </div>
   </div>
@@ -277,46 +395,6 @@ footer .legal{max-width:640px;margin:0 auto;line-height:1.7;font-size:.75rem;col
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- VERGLEICH -->
-<section id="vergleich">
-  <div class="container">
-    <div class="section-label">KV oder OP-Schutz?</div>
-    <h2>Welcher Schutz passt zu deiner Katze?</h2>
-    <p class="section-sub">Beide Varianten bieten echten Schutz – die richtige Wahl hängt von deiner Katze, deinem Budget und deinem Sicherheitsbedürfnis ab.</p>
-    <div class="vergleich-grid">
-      <div class="plan empfohlen">
-        <div class="plan-tag">Empfohlen · EisbaumTabelle Platz 1</div>
-        <h3>Katzenkrankenversicherung</h3>
-        <div class="preis-sub">Schon ab</div>
-        <div class="preis">14,84 € <span>/Monat</span></div>
-        <div class="preis-sub">inkl. 20 % Selbstbeteiligung (max. 250 €)</div>
-        <ul>
-          <li>Unbegrenzte Leistungssumme</li>
-          <li>Bis 4-fache GOT</li>
-          <li>Keine Wartezeit bei Unfällen</li>
-          <li>Zahnextraktionen &amp; Wurzelbehandlungen</li>
-          <li>Nachbehandlungen bis 30 Tage nach OP</li>
-        </ul>
-        <a class="btn-primary" href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&amp;versicherung=kv&amp;adm=00011802" target="_blank" rel="noopener">Jetzt abschließen</a>
-      </div>
-      <div class="plan">
-        <h3>Katzen-OP-Schutz</h3>
-        <div class="preis-sub">Günstiger Einstieg</div>
-        <div class="preis" style="font-size:1.4rem;padding:.45rem 0">Operationsschutz</div>
-        <div class="preis-sub">Fokus auf Operationskosten</div>
-        <ul>
-          <li>Absicherung von Operationskosten</li>
-          <li>Narkose und stationäre OP-Behandlung</li>
-          <li>Günstigerer Monatsbeitrag</li>
-          <li>Sinnvoll für junge, gesunde Katzen</li>
-        </ul>
-        <a class="btn-outline" href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&amp;versicherung=op&amp;adm=00011802" target="_blank" rel="noopener">Beitrag berechnen</a>
-      </div>
-    </div>
-    <div class="hinweis">Bekannte Vorerkrankungen und bereits angeratene Behandlungen müssen beim Antrag vollständig angegeben werden. Bei Unsicherheiten – melde dich bei mir.</div>
   </div>
 </section>
 
@@ -375,6 +453,49 @@ footer .legal{max-width:640px;margin:0 auto;line-height:1.7;font-size:.75rem;col
       <div class="step"><div class="num">4</div><h3>Schutz wählen</h3><p>KV oder OP</p></div>
       <div class="step"><div class="num">5</div><h3>Online abschließen</h3><p>Direkt über meinen Link</p></div>
       <div class="step"><div class="num">6</div><h3>Weiter begleitet</h3><p>Ich bin weiter für dich da</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2>Häufige Fragen</h2>
+    <p class="section-sub">Die wichtigsten Antworten auf einen Blick – alles Weitere klären wir persönlich.</p>
+    <div class="faq-list">
+      <details>
+        <summary>Was ist der Unterschied zwischen Krankenversicherung und OP-Schutz?</summary>
+        <div class="faq-a">Der OP-Schutz greift bei chirurgischen Eingriffen inkl. Narkose und stationärer Behandlung. Die Krankenversicherung (Vollschutz) deckt darüber hinaus auch ambulante Behandlungen, Diagnostik, Medikamente und Zahnbehandlungen ab – und ist der Tarif, der bei der EisbaumTabelle 2026 auf Platz 1 steht.</div>
+      </details>
+      <details>
+        <summary>Gibt es eine Wartezeit?</summary>
+        <div class="faq-a">Bei Erkrankungen gilt eine allgemeine Wartezeit von 30 Tagen. Bei Unfällen entfällt sie komplett – der Schutz greift sofort.</div>
+      </details>
+      <details>
+        <summary>Wie funktioniert die Selbstbeteiligung?</summary>
+        <div class="faq-a">Im Tarif mit 20 % Selbstbeteiligung zahlst du maximal 250 € pro Einreichung selbst – egal wie hoch die Rechnung ist. Bei einer 3.000-€-OP wären das z. B. nur 250 € Eigenanteil. Gegen einen höheren Beitrag gibt es den Tarif auch ohne Selbstbeteiligung – ich rechne dir gern beide Varianten durch.</div>
+      </details>
+      <details>
+        <summary>Sind Zahnerkrankungen wie FORL mitversichert?</summary>
+        <div class="faq-a">Ja – Zahnextraktionen, Wurzelbehandlungen und FORL gehören zu den versicherten Leistungen. Gerade bei Katzen ist das wichtig, da FORL eine der häufigsten und teuersten Erkrankungen ist.</div>
+      </details>
+      <details>
+        <summary>Kann ich meine Katze mit Vorerkrankungen versichern?</summary>
+        <div class="faq-a">Bekannte Vorerkrankungen und bereits angeratene Behandlungen sind vom Schutz ausgeschlossen und müssen beim Antrag vollständig angegeben werden. Alles, was nach Vertragsbeginn neu auftritt, ist versichert. Bei Unsicherheiten: Melde dich vor dem Antrag bei mir – das vermeidet Probleme im Leistungsfall.</div>
+      </details>
+      <details>
+        <summary>Ist meine Katze auch im Ausland geschützt?</summary>
+        <div class="faq-a">Ja, bei vorübergehenden Auslandsaufenthalten besteht weltweiter Versicherungsschutz bis zu 12 Monate.</div>
+      </details>
+      <details>
+        <summary>Kann ich den Tierarzt frei wählen?</summary>
+        <div class="faq-a">Ja, du hast freie Tierarzt- und Tierklinikwahl in ganz Deutschland. Erstattet wird bis zum 4-fachen GOT-Satz.</div>
+      </details>
+      <details>
+        <summary>Was kostet die Beratung?</summary>
+        <div class="faq-a">Nichts. Die Beratung ist kostenlos und unverbindlich – du entscheidest danach in Ruhe, ob und wie du deine Katze absichern möchtest.</div>
+      </details>
     </div>
   </div>
 </section>
