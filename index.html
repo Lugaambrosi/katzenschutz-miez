@@ -75,13 +75,13 @@ nav{position:sticky;top:0;z-index:100;background:rgba(18,16,31,.96);backdrop-fil
 .btn-nav{background:#7c3aed;color:#fff;padding:.55rem 1.2rem;border-radius:30px;font-weight:700;font-size:.85rem;white-space:nowrap}
 @media(max-width:760px){.nav-links{display:none}}
 
-/* HERO – Vollbild-Video */
+/* HERO – Parallax-Bild */
 #hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:4rem 1.5rem;overflow:hidden}
-.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .1s ease-out;transform:scaleX(-1) scale(1.15)}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transform:translate3d(0,0,0) scale(1.32) scaleX(-1);will-change:transform;backface-visibility:hidden}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,12,41,.72) 0%,rgba(15,12,41,.45) 45%,rgba(15,12,41,.08) 100%);z-index:1}
 .hero-content h1,.hero-sub,.hero-checks li{text-shadow:0 2px 12px rgba(0,0,0,.45)}
 .hero-inner{position:relative;z-index:2;max-width:1040px;margin:0 auto;width:100%}
-.hero-content{max-width:620px}
+.hero-content{max-width:620px;will-change:transform}
 .hero-kicker{display:inline-flex;align-items:center;gap:.5rem;background:rgba(124,58,237,.25);border:1px solid rgba(167,139,250,.5);color:#e9e2ff;font-size:.78rem;font-weight:700;padding:.4rem 1rem;border-radius:30px;margin-bottom:1.2rem}
 .hero-content h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:1.1rem}
 .hero-content h1 em{font-style:normal;color:#c4b5fd}
@@ -97,6 +97,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(18,16,31,.96);backdrop-fil
 .btn-primary{background:#7c3aed;color:#fff;padding:1rem 2.2rem;border-radius:30px;font-weight:800;font-size:1rem;display:inline-block;box-shadow:0 8px 24px rgba(124,58,237,.45)}
 .btn-primary:hover{background:#6d28d9}
 .btn-ghost{background:rgba(255,255,255,.12);color:#fff;padding:1rem 1.7rem;border-radius:30px;font-weight:700;font-size:.95rem;border:1px solid rgba(255,255,255,.3);display:inline-block}
+@media(prefers-reduced-motion:reduce){.hero-media{transform:scale(1.05) scaleX(-1)!important}}
 
 /* TRUST BAR */
 #trustbar{background:#12101f;padding:1.4rem 1.5rem}
@@ -631,33 +632,60 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
 <a class="wa-bubble" href="https://wa.me/4917679552698" target="_blank" rel="noopener">💬 WhatsApp schreiben</a>
 
 <script>
-  // Mouse parallax effect for hero background
-  const hero = document.getElementById('hero');
-  const parallaxBg = document.querySelector('.parallax-bg');
-  
-  if (hero && parallaxBg) {
-    hero.addEventListener('mousemove', (e) => {
-      const width = hero.offsetWidth;
-      const height = hero.offsetHeight;
-      
-      // Calculate normalized mouse position relative to center (-0.5 to 0.5)
-      const rect = hero.getBoundingClientRect();
-      const mouseX = ((e.clientX - rect.left) - width / 2) / width;
-      const mouseY = ((e.clientY - rect.top) - height / 2) / height;
-      
-      // Maximum displacement in pixels
-      const maxMove = 25;
-      const moveX = mouseX * maxMove;
-      const moveY = mouseY * maxMove;
-      
-      parallaxBg.style.transform = `scaleX(-1) translate(${moveX}px, ${moveY}px) scale(1.15)`;
-    });
-    
-    // Reset positions when mouse leaves
-    hero.addEventListener('mouseleave', () => {
-      parallaxBg.style.transform = 'scaleX(-1) translate(0, 0) scale(1.15)';
-    });
+/* Sanfter Hero-Parallax: Maus (Desktop) + Scroll (Mobil & Desktop),
+   trägheitsbasiert per requestAnimationFrame, respektiert reduced-motion. */
+(function () {
+  var hero = document.getElementById('hero');
+  var bg = document.querySelector('.parallax-bg');
+  if (!hero || !bg) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var content = hero.querySelector('.hero-content');
+  var SCALE = 1.32;          // Überzoom, damit beim Bewegen keine Ränder sichtbar werden
+  var MOUSE_MAX = 26;        // max. Bildverschiebung durch die Maus (px)
+  var CONTENT_MAX = 16;      // gegenläufige Textverschiebung für Tiefe (px)
+  var SCROLL_FACTOR = 0.18;  // Stärke des Scroll-Parallax
+  var EASE = 0.085;          // Trägheit: kleiner = weicher/träger
+
+  var targetX = 0, targetY = 0;     // Maus-Ziel (-0.5..0.5)
+  var curX = 0, curY = 0;           // interpolierte Maus-Werte
+  var scrollY = window.scrollY || 0;
+  var hovering = false;
+
+  hero.addEventListener('mousemove', function (e) {
+    var r = hero.getBoundingClientRect();
+    targetX = (e.clientX - r.left) / r.width - 0.5;
+    targetY = (e.clientY - r.top) / r.height - 0.5;
+    hovering = true;
+  });
+  hero.addEventListener('mouseleave', function () {
+    targetX = 0; targetY = 0; hovering = false;
+  });
+  window.addEventListener('scroll', function () {
+    scrollY = window.scrollY || window.pageYOffset || 0;
+  }, { passive: true });
+
+  function frame() {
+    curX += (targetX - curX) * EASE;
+    curY += (targetY - curY) * EASE;
+
+    var moveX = curX * MOUSE_MAX;
+    var scrollPart = scrollY * SCROLL_FACTOR;
+    // Scroll-Parallax nur solange der Hero im Blick ist (begrenzt Ränder)
+    if (scrollPart > hero.offsetHeight * 0.5) scrollPart = hero.offsetHeight * 0.5;
+    var moveY = curY * MOUSE_MAX + scrollPart;
+
+    bg.style.transform =
+      'translate3d(' + moveX.toFixed(2) + 'px,' + moveY.toFixed(2) + 'px,0) scale(' + SCALE + ') scaleX(-1)';
+
+    if (content) {
+      content.style.transform =
+        'translate3d(' + (-curX * CONTENT_MAX).toFixed(2) + 'px,' + (-curY * CONTENT_MAX).toFixed(2) + 'px,0)';
+    }
+    requestAnimationFrame(frame);
   }
+  requestAnimationFrame(frame);
+})();
 </script>
 
 </body>
