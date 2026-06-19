@@ -195,6 +195,11 @@ h2{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:#1a1a2e;text-align
 .review-card p{font-size:.86rem;color:#444;line-height:1.6;margin-bottom:.7rem}
 .review-card .autor{font-size:.78rem;color:#888;font-weight:600}
 .review-cta{text-align:center;margin-top:1.6rem}
+.review-qr{display:none}
+@media(min-width:761px){.review-qr{display:inline-flex;align-items:center;gap:1rem;margin-top:1.3rem;background:#fff;border:1px solid #ece9f6;border-radius:14px;padding:.9rem 1.1rem;box-shadow:0 3px 12px rgba(26,26,46,.05)}}
+.review-qr img{width:96px;height:96px;display:block}
+.review-qr .rq-text{font-size:.82rem;color:#555;max-width:200px;text-align:left;line-height:1.5}
+.review-qr .rq-text strong{color:#1a1a2e}
 
 /* ABLAUF */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;max-width:920px;margin:0 auto}
@@ -500,6 +505,10 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
     </div>
     <div class="review-cta">
       <a class="btn-primary" href="https://g.page/r/CZ_BYAxxpUq7EBM/review" target="_blank" rel="noopener">Jetzt Bewertung schreiben</a>
+      <div class="review-qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;margin=6&amp;color=1a1a2e&amp;data=https%3A%2F%2Fg.page%2Fr%2FCZ_BYAxxpUq7EBM%2Freview" alt="QR-Code zur Google-Bewertung" loading="lazy">
+        <span class="rq-text"><strong>Am PC?</strong> Scann den QR-Code mit deinem Handy und bewerte direkt unterwegs.</span>
+      </div>
     </div>
   </div>
 </section>
