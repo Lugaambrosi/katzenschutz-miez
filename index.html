@@ -701,5 +701,35 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
 })();
 </script>
 
+<script>
+/* Formular per AJAX an Formspree senden und danach auf die eigene Danke-Seite
+   weiterleiten (Formspree honoriert _next auf dem Free-Plan nicht zuverlässig). */
+(function () {
+  var form = document.querySelector('form[action*="formspree"]');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    var orig = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Wird gesendet …'; }
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (res) {
+      if (res.ok) {
+        window.location.href = '/danke.html';
+      } else {
+        alert('Es gab ein Problem beim Senden. Bitte versuche es erneut oder melde dich direkt per WhatsApp.');
+        if (btn) { btn.disabled = false; btn.textContent = orig; }
+      }
+    }).catch(function () {
+      alert('Es gab ein Problem beim Senden. Bitte versuche es erneut oder melde dich direkt per WhatsApp.');
+      if (btn) { btn.disabled = false; btn.textContent = orig; }
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
