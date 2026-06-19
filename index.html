@@ -632,51 +632,64 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
 <a class="wa-bubble" href="https://wa.me/4917679552698" target="_blank" rel="noopener">💬 WhatsApp schreiben</a>
 
 <script>
-/* Sanfter Hero-Parallax: Maus (Desktop) + Scroll (Mobil & Desktop),
+/* Hero-Effekt: Ken-Burns Auto-Zoom + Maus-/Scroll-Parallax,
    trägheitsbasiert per requestAnimationFrame, respektiert reduced-motion. */
 (function () {
   var hero = document.getElementById('hero');
   var bg = document.querySelector('.parallax-bg');
   if (!hero || !bg) return;
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   var content = hero.querySelector('.hero-content');
-  var SCALE = 1.32;          // Überzoom, damit beim Bewegen keine Ränder sichtbar werden
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Reduced-Motion: statisches Bild, keine Animation
+  if (reduce) {
+    bg.style.transform = 'scale(1.06) scaleX(-1)';
+    return;
+  }
+
   var MOUSE_MAX = 26;        // max. Bildverschiebung durch die Maus (px)
   var CONTENT_MAX = 16;      // gegenläufige Textverschiebung für Tiefe (px)
   var SCROLL_FACTOR = 0.18;  // Stärke des Scroll-Parallax
   var EASE = 0.085;          // Trägheit: kleiner = weicher/träger
 
+  // Ken-Burns Auto-Zoom (sanftes Rein- und Rauszoomen)
+  var ZOOM_MIN = 1.30, ZOOM_MAX = 1.42;
+  var ZOOM_PERIOD = 26000;   // ms für einen vollen Rein-/Raus-Zyklus
+  // Langsamer Auto-Schwenk, damit es auch ohne Maus „lebt"
+  var DRIFT_X = 8, DRIFT_Y = 6, DRIFT_PERIOD = 34000;
+
   var targetX = 0, targetY = 0;     // Maus-Ziel (-0.5..0.5)
   var curX = 0, curY = 0;           // interpolierte Maus-Werte
   var scrollY = window.scrollY || 0;
-  var hovering = false;
+  var start = performance.now();
 
   hero.addEventListener('mousemove', function (e) {
     var r = hero.getBoundingClientRect();
     targetX = (e.clientX - r.left) / r.width - 0.5;
     targetY = (e.clientY - r.top) / r.height - 0.5;
-    hovering = true;
   });
-  hero.addEventListener('mouseleave', function () {
-    targetX = 0; targetY = 0; hovering = false;
-  });
+  hero.addEventListener('mouseleave', function () { targetX = 0; targetY = 0; });
   window.addEventListener('scroll', function () {
     scrollY = window.scrollY || window.pageYOffset || 0;
   }, { passive: true });
 
-  function frame() {
+  function frame(now) {
+    var t = now - start;
     curX += (targetX - curX) * EASE;
     curY += (targetY - curY) * EASE;
 
-    var moveX = curX * MOUSE_MAX;
+    var zoom = ZOOM_MIN + (ZOOM_MAX - ZOOM_MIN) * (0.5 - 0.5 * Math.cos(t * 2 * Math.PI / ZOOM_PERIOD));
+    var driftX = Math.sin(t * 2 * Math.PI / DRIFT_PERIOD) * DRIFT_X;
+    var driftY = Math.cos(t * 2 * Math.PI / DRIFT_PERIOD) * DRIFT_Y;
+
+    var moveX = curX * MOUSE_MAX + driftX;
     var scrollPart = scrollY * SCROLL_FACTOR;
-    // Scroll-Parallax nur solange der Hero im Blick ist (begrenzt Ränder)
     if (scrollPart > hero.offsetHeight * 0.5) scrollPart = hero.offsetHeight * 0.5;
-    var moveY = curY * MOUSE_MAX + scrollPart;
+    var moveY = curY * MOUSE_MAX + driftY + scrollPart;
 
     bg.style.transform =
-      'translate3d(' + moveX.toFixed(2) + 'px,' + moveY.toFixed(2) + 'px,0) scale(' + SCALE + ') scaleX(-1)';
+      'translate3d(' + moveX.toFixed(2) + 'px,' + moveY.toFixed(2) + 'px,0) scale(' + zoom.toFixed(4) + ') scaleX(-1)';
 
     if (content) {
       content.style.transform =
