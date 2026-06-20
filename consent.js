@@ -1,7 +1,9 @@
-/* KatzenSchutz Miez – DSGVO Cookie-Consent + Google Analytics 4
-   Lädt GA4 (G-44LYYME2NX) NUR nach aktiver Zustimmung des Besuchers. */
+/* KatzenSchutz Miez – DSGVO Cookie-Consent
+   Lädt Google Analytics 4 UND (optional) den Meta-Pixel NUR nach Zustimmung.
+   Meta-Pixel: sobald du eine Pixel-ID hast, unten bei META_PIXEL_ID eintragen. */
 (function () {
   var GA_ID = 'G-44LYYME2NX';
+  var META_PIXEL_ID = ''; // <-- hier deine Meta-Pixel-ID eintragen (z. B. '1234567890'), dann ist der FB-Pixel aktiv
   var KEY = 'ksm_consent_v1';
 
   function loadGA() {
@@ -18,9 +20,23 @@
     gtag('config', GA_ID, { anonymize_ip: true });
   }
 
+  function loadMeta() {
+    if (!META_PIXEL_ID || window.__ksmMeta) return;
+    window.__ksmMeta = true;
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+      t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('init', META_PIXEL_ID);
+    window.fbq('track', 'PageView');
+  }
+
+  function loadAll() { loadGA(); loadMeta(); }
+
   var choice;
   try { choice = localStorage.getItem(KEY); } catch (e) { choice = null; }
-  if (choice === 'granted') { loadGA(); return; }
+  if (choice === 'granted') { loadAll(); return; }
   if (choice === 'denied') { return; }
 
   function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
@@ -45,7 +61,7 @@
     bar.setAttribute('role', 'dialog');
     bar.setAttribute('aria-label', 'Cookie-Einwilligung');
     bar.innerHTML = '<div class="ksm-c-inner">'
-      + '<p>Ich nutze Cookies für anonyme Statistiken (Google Analytics), um diese Seite zu verbessern. '
+      + '<p>Ich nutze Cookies für anonyme Statistiken (Google Analytics) und Werbe-Messung, um diese Seite zu verbessern. '
       + 'Nur mit deiner Zustimmung. <a href="/datenschutz.html">Mehr erfahren</a></p>'
       + '<div class="ksm-c-btns">'
       + '<button class="ksm-c-no" type="button">Ablehnen</button>'
@@ -54,7 +70,7 @@
     document.body.appendChild(bar);
 
     bar.querySelector('.ksm-c-yes').addEventListener('click', function () {
-      save('granted'); bar.parentNode && bar.parentNode.removeChild(bar); loadGA();
+      save('granted'); bar.parentNode && bar.parentNode.removeChild(bar); loadAll();
     });
     bar.querySelector('.ksm-c-no').addEventListener('click', function () {
       save('denied'); bar.parentNode && bar.parentNode.removeChild(bar);
