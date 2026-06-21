@@ -3,7 +3,7 @@
    Meta-Pixel: sobald du eine Pixel-ID hast, unten bei META_PIXEL_ID eintragen. */
 (function () {
   var GA_ID = 'G-44LYYME2NX';
-  var META_PIXEL_ID = ''; // <-- hier deine Meta-Pixel-ID eintragen (z. B. '1234567890'), dann ist der FB-Pixel aktiv
+  var META_PIXEL_ID = '2082663425935593'; // Meta-Pixel aktiv
   var KEY = 'ksm_consent_v1';
 
   function loadGA() {
