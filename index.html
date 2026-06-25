@@ -11,14 +11,12 @@
 <meta property="og:url" content="https://katzenschutz-miez.de/">
 <meta property="og:title" content="KatzenSchutz Miez – Katzenkrankenversicherung mit Luca Ambos">
 <meta property="og:description" content="Nie wieder Angst vor der Tierarztrechnung: Katzenkrankenversicherung ab 14,84 €/Monat mit persönlicher Beratung. EisbaumTabelle Platz 1 (2026).">
-<meta property="og:image" content="https://katzenschutz-miez.de/og-preview.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://katzenschutz-miez.de/katz_hero.jpg">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="KatzenSchutz Miez – Katzenkrankenversicherung mit Luca Ambos">
 <meta name="twitter:description" content="Nie wieder Angst vor der Tierarztrechnung: Katzenkrankenversicherung ab 14,84 €/Monat mit persönlicher Beratung.">
-<meta name="twitter:image" content="https://katzenschutz-miez.de/og-preview.jpg">
+<meta name="twitter:image" content="https://katzenschutz-miez.de/katz_hero.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,7 +54,7 @@
     {"@type": "Question", "name": "Sind Zahnerkrankungen wie FORL mitversichert?", "acceptedAnswer": {"@type": "Answer", "text": "Ja – Zahnextraktionen, Wurzelbehandlungen und FORL gehören zu den versicherten Leistungen. Gerade bei Katzen ist das wichtig, da FORL eine der häufigsten und teuersten Erkrankungen ist."}},
     {"@type": "Question", "name": "Kann ich meine Katze mit Vorerkrankungen versichern?", "acceptedAnswer": {"@type": "Answer", "text": "Bekannte Vorerkrankungen und bereits angeratene Behandlungen sind vom Schutz ausgeschlossen und müssen beim Antrag vollständig angegeben werden. Alles, was nach Vertragsbeginn neu auftritt, ist versichert."}},
     {"@type": "Question", "name": "Ist meine Katze auch im Ausland geschützt?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, bei vorübergehenden Auslandsaufenthalten besteht weltweiter Versicherungsschutz bis zu 12 Monate."}},
-    {"@type": "Question", "name": "Kann ich den Tierarzt frei wählen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, du hast freie Tierarzt- und Tierklinikwahl in ganz Deutschland. Erstattet wird bis zum 4-fachen GOT-Satz."}},
+    {"@type": "Question", "name": "Kann ich den Tierarzt frei wählen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, du hast freie Tierarzt- und Tierklinikwahl in ganz Deutschland. Erstattet wird bis zum 4-fachen Satz der Tierarzt-Gebührenordnung (GOT)."}},
     {"@type": "Question", "name": "Was kostet die Beratung?", "acceptedAnswer": {"@type": "Answer", "text": "Nichts. Die Beratung ist kostenlos und unverbindlich – du entscheidest danach in Ruhe, ob und wie du deine Katze absichern möchtest."}}
   ]
 }
@@ -77,13 +75,13 @@ nav{position:sticky;top:0;z-index:100;background:rgba(18,16,31,.96);backdrop-fil
 .btn-nav{background:#7c3aed;color:#fff;padding:.55rem 1.2rem;border-radius:30px;font-weight:700;font-size:.85rem;white-space:nowrap}
 @media(max-width:760px){.nav-links{display:none}}
 
-/* HERO – Parallax-Bild */
+/* HERO – Vollbild-Video */
 #hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:4rem 1.5rem;overflow:hidden}
-.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transform:translate3d(0,0,0) scale(1.32) scaleX(-1);will-change:transform;backface-visibility:hidden}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .1s ease-out;transform:scaleX(-1) scale(1.15)}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,12,41,.72) 0%,rgba(15,12,41,.45) 45%,rgba(15,12,41,.08) 100%);z-index:1}
 .hero-content h1,.hero-sub,.hero-checks li{text-shadow:0 2px 12px rgba(0,0,0,.45)}
 .hero-inner{position:relative;z-index:2;max-width:1040px;margin:0 auto;width:100%}
-.hero-content{max-width:620px;will-change:transform}
+.hero-content{max-width:620px}
 .hero-kicker{display:inline-flex;align-items:center;gap:.5rem;background:rgba(124,58,237,.25);border:1px solid rgba(167,139,250,.5);color:#e9e2ff;font-size:.78rem;font-weight:700;padding:.4rem 1rem;border-radius:30px;margin-bottom:1.2rem}
 .hero-content h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:1.1rem}
 .hero-content h1 em{font-style:normal;color:#c4b5fd}
@@ -99,11 +97,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(18,16,31,.96);backdrop-fil
 .btn-primary{background:#7c3aed;color:#fff;padding:1rem 2.2rem;border-radius:30px;font-weight:800;font-size:1rem;display:inline-block;box-shadow:0 8px 24px rgba(124,58,237,.45)}
 .btn-primary:hover{background:#6d28d9}
 .btn-ghost{background:rgba(255,255,255,.12);color:#fff;padding:1rem 1.7rem;border-radius:30px;font-weight:700;font-size:.95rem;border:1px solid rgba(255,255,255,.3);display:inline-block}
-.hero-promise{margin-top:1.5rem;background:rgba(124,58,237,.22);border:1px solid rgba(167,139,250,.5);border-radius:14px;padding:.95rem 1.15rem;color:#fff;font-size:.93rem;line-height:1.55;max-width:560px}
-.hero-promise .hp-title{font-weight:800;display:block;margin-bottom:.2rem}
-.hero-promise a{color:#d6c8ff;font-weight:800;white-space:nowrap}
-.hero-promise strong{color:#fff}
-@media(prefers-reduced-motion:reduce){.hero-media{transform:scale(1.05) scaleX(-1)!important}}
 
 /* TRUST BAR */
 #trustbar{background:#12101f;padding:1.4rem 1.5rem}
@@ -197,10 +190,6 @@ h2{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:#1a1a2e;text-align
 .review-card p{font-size:.86rem;color:#444;line-height:1.6;margin-bottom:.7rem}
 .review-card .autor{font-size:.78rem;color:#888;font-weight:600}
 .review-cta{text-align:center;margin-top:1.6rem}
-.review-qr{display:none}
-@media(min-width:761px){.review-qr{display:flex;align-items:center;gap:1rem;width:max-content;max-width:100%;margin:1.4rem auto 0;background:#fff;border:1px solid #ece9f6;border-radius:14px;padding:.8rem 1.1rem;box-shadow:0 3px 12px rgba(26,26,46,.05)}}
-.review-qr img{width:88px;height:88px;display:block}
-.review-qr .rq-text{font-size:.95rem;color:#1a1a2e;font-weight:800;text-align:left}
 
 /* ABLAUF */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;max-width:920px;margin:0 auto}
@@ -271,21 +260,17 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
     <div class="hero-content">
       <span class="hero-kicker">🏆 EisbaumTabelle Platz 1 · 2026</span>
       <h1>Nie wieder Angst vor der <em>Tierarztrechnung</em>.</h1>
-      <p class="hero-sub">Katzenkrankenversicherung mit echter persönlicher Beratung – ich bin selbst Katzenliebhaber und dein fester Ansprechpartner, keine anonyme Hotline.</p>
+      <p class="hero-sub">Katzenkrankenversicherung mit persönlicher Beratung von Luca Ambos – von Katzenmensch zu Katzenmensch, statt anonymer Hotline.</p>
       <ul class="hero-checks">
         <li>Unbegrenzte Leistungssumme – auch bei teuren OPs</li>
         <li>Erstattung bis zum 4-fachen Satz der Tierarzt-Gebührenordnung (GOT) – auch im Notdienst</li>
-        <li>Kostenloser Online-Tierarzt rund um die Uhr</li>
+        <li>Zähne (FORL), rassespezifische Erkrankungen abgedeckt</li>
         <li>Keine Wartezeit bei Unfällen</li>
       </ul>
       <div class="hero-price"><span class="ab">schon ab</span><span class="betrag">14,84 €</span><span class="monat">/ Monat</span></div>
       <div class="hero-btns">
         <a class="btn-primary" href="https://ssl.barmenia.de/online-versichern/#/tierversicherung/Beitrag?tierart=Katze&amp;versicherung=kv&amp;adm=00011802" target="_blank" rel="noopener">Jetzt unverbindliches Angebot sichern</a>
         <a class="btn-ghost" href="#kontakt">Lieber erst beraten lassen?</a>
-      </div>
-      <div class="hero-promise">
-        <span class="hp-title">📞 Dein persönlicher Ansprechpartner – keine Hotline</span>
-        Schreib oder ruf mich an unter <a href="tel:+4917679552698">0176 795 526 98</a>. Ich melde mich <strong>garantiert innerhalb von 24 Stunden persönlich</strong> bei dir.
       </div>
     </div>
   </div>
@@ -296,8 +281,8 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
   <div class="trustbar-inner">
     <div class="tb-item"><span class="tb-icon">🏆</span><span><span class="tb-big">Platz 1 – EisbaumTabelle 2026</span><br>98 % Ø-Erstattung · Barmenia Premium Plus</span></div>
     <div class="tb-item"><span class="tb-icon"><span class="tb-stars">★★★★★</span></span><span><span class="tb-big">5,0 bei Google</span><br><a href="https://g.page/r/CZ_BYAxxpUq7EBM/review" style="color:#a78bfa" target="_blank" rel="noopener">Bewertung schreiben</a></span></div>
-    <div class="tb-item"><span class="tb-icon">🐱</span><span><span class="tb-big">Selbst Katzenliebhaber</span><br>Mit Herz für Katzen, kein Verkäufer</span></div>
-    <div class="tb-item"><span class="tb-icon">⏱️</span><span><span class="tb-big">24-Std-Antwortgarantie</span><br>Du erreichst immer mich persönlich</span></div>
+    <div class="tb-item"><span class="tb-icon">🐱</span><span><span class="tb-big">Selbst Katzenmensch</span><br>Beratung von Halter zu Halter</span></div>
+    <div class="tb-item"><span class="tb-icon">💬</span><span><span class="tb-big">Persönliche Beratung</span><br>Kein Callcenter, keine Hotline</span></div>
     <div class="tb-item"><img src="https://cdn.barmeniagothaer.de/barmeniagothaer/media/barmeniagothaer_logo_white-original_webp.webp" alt="BarmeniaGothaer Logo" style="height:36px;width:auto" loading="lazy"></div>
   </div>
 </div>
@@ -332,8 +317,7 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
       <div class="kosten-row"><span class="kr-name">Zahnsanierung / FORL unter Vollnarkose</span><span class="kr-preis">800 – 1.500 €</span></div>
       <div class="kosten-row"><span class="kr-name">Tumor-OP inkl. Diagnostik (MRT/CT)</span><span class="kr-preis">1.500 – 3.500 €</span></div>
       <div class="kosten-row"><span class="kr-name">Nachsorge: Medikamente, Kontrollen, Klinik</span><span class="kr-preis">oft mehrere hundert €</span></div>
-      <p class="kosten-fussnote">Richtwerte je nach Praxis, Region und GOT-Satz (1- bis 4-fach). Vor- und Nachbehandlungen kommen häufig hinzu.</p>
-      <p class="kosten-fussnote" style="margin-top:.4rem">📖 Mehr dazu: <a href="/ratgeber-katzen-op-kosten.html" style="color:#7c3aed;font-weight:700">Was kostet eine Katzen-OP? – ausführlicher Ratgeber</a></p>
+      <p class="kosten-fussnote">Richtwerte je nach Praxis, Region und Gebührensatz (1- bis 4-fach nach GOT). Vor- und Nachbehandlungen kommen häufig hinzu.</p>
     </div>
   </div>
 </section>
@@ -354,18 +338,17 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
           <li><strong>Rassespezifische Erkrankungen</strong> – auch mehrfach</li>
           <li>Diagnostik wie <strong>MRT, CT, Röntgen</strong> vor der OP</li>
           <li><strong>Nachbehandlungen bis 30 Tage</strong> nach der OP</li>
-          <li><strong>Kostenloser Online-Tierarzt</strong> 24/7 (FirstVet &amp; Pfotendoctor)</li>
           <li>Keine Wartezeit bei <strong>Unfällen &amp; Vergiftungen</strong></li>
         </ul>
       </div>
       <div class="leistung-block hell">
         <h3>🤝 Dein Plus bei mir</h3>
         <ul>
-          <li><strong>24-Stunden-Antwortgarantie</strong> – du erreichst immer mich persönlich</li>
-          <li><strong>Eine feste Ansprechperson</strong> – vor und nach dem Abschluss, kein Callcenter</li>
-          <li>Hilfe bei <strong>Erstattungen &amp; Rechnungen</strong> im Leistungsfall</li>
-          <li>Ehrliche Einschätzung: <strong>KV oder OP-Schutz</strong> – was wirklich passt</li>
+          <li><strong>Persönlicher Ansprechpartner</strong> – vor und nach dem Abschluss</li>
           <li><strong>Freie Tierarzt- und Klinikwahl</strong> in ganz Deutschland</li>
+          <li><strong>Weltweiter Schutz</strong> bei Auslandsaufenthalten bis 12 Monate</li>
+          <li>Ehrliche Einschätzung: <strong>KV oder OP-Schutz</strong> – was wirklich passt</li>
+          <li>Hilfe bei <strong>Erstattungen &amp; Rechnungen</strong> im Leistungsfall</li>
           <li>Erreichbar per <strong>WhatsApp, Telefon oder E-Mail</strong></li>
         </ul>
       </div>
@@ -422,9 +405,9 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
     <div class="ueber-grid">
       <img src="katz_luca.jpg" alt="Luca Ambos mit Katze">
       <div class="ueber-text">
-        <p>Hi, ich bin <strong>Luca</strong> – durch und durch <strong>Katzenliebhaber</strong> aus Berlin. Bei uns in der Familie gehören Katzen einfach dazu. Ich weiß deshalb aus eigener Erfahrung, wie sehr man an den kleinen Fellnasen hängt – und wie schnell ein Tierarztbesuch richtig teuer werden kann.</p>
+        <p>Hi, ich bin <strong>Luca</strong> – Katzenliebhaber aus Berlin. Bei uns in der Familie gehören Katzen einfach dazu. Ich weiß deshalb aus eigener Erfahrung, wie sehr man an den kleinen Fellnasen hängt – und wie schnell ein Tierarztbesuch richtig teuer werden kann.</p>
         <p>Genau deswegen setze ich mich <strong>für dich</strong> ein: Ich erkläre dir verständlich, was versichert ist und was nicht, helfe bei der Tarifwahl und bleibe auch <strong>nach dem Abschluss</strong> dein Ansprechpartner – ob bei Fragen zur Erstattung oder zu Rechnungen.</p>
-        <p><strong>Mein Versprechen:</strong> Du hast eine feste Nummer und einen echten Menschen – keine Hotline. Melde dich, und ich antworte <strong>innerhalb von 24 Stunden persönlich</strong> bei dir. Die Beratung ist <strong>kostenlos und unverbindlich</strong>.</p>
+        <p>Die Beratung ist <strong>kostenlos und unverbindlich</strong> – per Telefon, WhatsApp oder E-Mail.</p>
         <div class="ueber-ctas">
           <a class="btn-wa" href="https://wa.me/4917679552698" target="_blank" rel="noopener">💬 WhatsApp schreiben</a>
           <a class="btn-mail" href="mailto:ambos.luca@gmail.com">✉️ E-Mail senden</a>
@@ -506,10 +489,6 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
     </div>
     <div class="review-cta">
       <a class="btn-primary" href="https://g.page/r/CZ_BYAxxpUq7EBM/review" target="_blank" rel="noopener">Jetzt Bewertung schreiben</a>
-      <div class="review-qr">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;margin=6&amp;color=1a1a2e&amp;data=https%3A%2F%2Fg.page%2Fr%2FCZ_BYAxxpUq7EBM%2Freview" alt="QR-Code zur Google-Bewertung" loading="lazy">
-        <span class="rq-text">Jetzt schon bewerten</span>
-      </div>
     </div>
   </div>
 </section>
@@ -564,7 +543,7 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
       </details>
       <details>
         <summary>Kann ich den Tierarzt frei wählen?</summary>
-        <div class="faq-a">Ja, du hast freie Tierarzt- und Tierklinikwahl in ganz Deutschland. Erstattet wird bis zum 4-fachen GOT-Satz.</div>
+        <div class="faq-a">Ja, du hast freie Tierarzt- und Tierklinikwahl in ganz Deutschland. Erstattet wird bis zum 4-fachen Satz der Tierarzt-Gebührenordnung (GOT).</div>
       </details>
       <details>
         <summary>Was kostet die Beratung?</summary>
@@ -645,12 +624,6 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
     <a href="/impressum.html">Impressum</a>
     <a href="/datenschutz.html">Datenschutz</a>
   </div>
-  <div class="footer-links" style="margin-bottom:1.4rem">
-    <a href="/ratgeber-katzen-op-kosten.html">Ratgeber: Katzen-OP-Kosten</a>
-    <a href="/ratgeber-op-schutz-oder-vollschutz.html">OP-Schutz oder Vollschutz?</a>
-    <a href="/ratgeber-katzenversicherung-vorerkrankung.html">Versicherung trotz Vorerkrankung</a>
-    <a href="/ratgeber-katzenversicherung-berlin.html">Katzenversicherung Berlin</a>
-  </div>
   <p class="legal">Diese Seite vermittelt offizielle Versicherungsprodukte der BarmeniaGothaer. Luca Ambos ist autorisierter Vermittler. Maßgeblich für Leistung und Bedingungen sind die aktuellen Versicherungsbedingungen der BarmeniaGothaer.</p>
 </footer>
 
@@ -658,105 +631,34 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
 <a class="wa-bubble" href="https://wa.me/4917679552698" target="_blank" rel="noopener">💬 WhatsApp schreiben</a>
 
 <script>
-/* Hero-Effekt: Ken-Burns Auto-Zoom + Maus-/Scroll-Parallax,
-   trägheitsbasiert per requestAnimationFrame, respektiert reduced-motion. */
-(function () {
-  var hero = document.getElementById('hero');
-  var bg = document.querySelector('.parallax-bg');
-  if (!hero || !bg) return;
+  // Mouse parallax effect for hero background
+  const hero = document.getElementById('hero');
+  const parallaxBg = document.querySelector('.parallax-bg');
 
-  var content = hero.querySelector('.hero-content');
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (hero && parallaxBg) {
+    hero.addEventListener('mousemove', (e) => {
+      const width = hero.offsetWidth;
+      const height = hero.offsetHeight;
 
-  // Reduced-Motion: statisches Bild, keine Animation
-  if (reduce) {
-    bg.style.transform = 'scale(1.06) scaleX(-1)';
-    return;
-  }
+      // Calculate normalized mouse position relative to center (-0.5 to 0.5)
+      const rect = hero.getBoundingClientRect();
+      const mouseX = ((e.clientX - rect.left) - width / 2) / width;
+      const mouseY = ((e.clientY - rect.top) - height / 2) / height;
 
-  var MOUSE_MAX = 26;        // max. Bildverschiebung durch die Maus (px)
-  var CONTENT_MAX = 16;      // gegenläufige Textverschiebung für Tiefe (px)
-  var SCROLL_FACTOR = 0.18;  // Stärke des Scroll-Parallax
-  var EASE = 0.085;          // Trägheit: kleiner = weicher/träger
+      // Maximum displacement in pixels
+      const maxMove = 25;
+      const moveX = mouseX * maxMove;
+      const moveY = mouseY * maxMove;
 
-  // Ken-Burns Auto-Zoom (sanftes Rein- und Rauszoomen)
-  var ZOOM_MIN = 1.30, ZOOM_MAX = 1.42;
-  var ZOOM_PERIOD = 26000;   // ms für einen vollen Rein-/Raus-Zyklus
-  // Langsamer Auto-Schwenk, damit es auch ohne Maus „lebt"
-  var DRIFT_X = 8, DRIFT_Y = 6, DRIFT_PERIOD = 34000;
-
-  var targetX = 0, targetY = 0;     // Maus-Ziel (-0.5..0.5)
-  var curX = 0, curY = 0;           // interpolierte Maus-Werte
-  var scrollY = window.scrollY || 0;
-  var start = performance.now();
-
-  hero.addEventListener('mousemove', function (e) {
-    var r = hero.getBoundingClientRect();
-    targetX = (e.clientX - r.left) / r.width - 0.5;
-    targetY = (e.clientY - r.top) / r.height - 0.5;
-  });
-  hero.addEventListener('mouseleave', function () { targetX = 0; targetY = 0; });
-  window.addEventListener('scroll', function () {
-    scrollY = window.scrollY || window.pageYOffset || 0;
-  }, { passive: true });
-
-  function frame(now) {
-    var t = now - start;
-    curX += (targetX - curX) * EASE;
-    curY += (targetY - curY) * EASE;
-
-    var zoom = ZOOM_MIN + (ZOOM_MAX - ZOOM_MIN) * (0.5 - 0.5 * Math.cos(t * 2 * Math.PI / ZOOM_PERIOD));
-    var driftX = Math.sin(t * 2 * Math.PI / DRIFT_PERIOD) * DRIFT_X;
-    var driftY = Math.cos(t * 2 * Math.PI / DRIFT_PERIOD) * DRIFT_Y;
-
-    var moveX = curX * MOUSE_MAX + driftX;
-    var scrollPart = scrollY * SCROLL_FACTOR;
-    if (scrollPart > hero.offsetHeight * 0.5) scrollPart = hero.offsetHeight * 0.5;
-    var moveY = curY * MOUSE_MAX + driftY + scrollPart;
-
-    bg.style.transform =
-      'translate3d(' + moveX.toFixed(2) + 'px,' + moveY.toFixed(2) + 'px,0) scale(' + zoom.toFixed(4) + ') scaleX(-1)';
-
-    if (content) {
-      content.style.transform =
-        'translate3d(' + (-curX * CONTENT_MAX).toFixed(2) + 'px,' + (-curY * CONTENT_MAX).toFixed(2) + 'px,0)';
-    }
-    requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
-})();
-</script>
-
-<script>
-/* Formular per AJAX an Formspree senden und danach auf die eigene Danke-Seite
-   weiterleiten (Formspree honoriert _next auf dem Free-Plan nicht zuverlässig). */
-(function () {
-  var form = document.querySelector('form[action*="formspree"]');
-  if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn = form.querySelector('button[type="submit"]');
-    var orig = btn ? btn.textContent : '';
-    if (btn) { btn.disabled = true; btn.textContent = 'Wird gesendet …'; }
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(function (res) {
-      if (res.ok) {
-        window.location.href = '/danke.html';
-      } else {
-        alert('Es gab ein Problem beim Senden. Bitte versuche es erneut oder melde dich direkt per WhatsApp.');
-        if (btn) { btn.disabled = false; btn.textContent = orig; }
-      }
-    }).catch(function () {
-      alert('Es gab ein Problem beim Senden. Bitte versuche es erneut oder melde dich direkt per WhatsApp.');
-      if (btn) { btn.disabled = false; btn.textContent = orig; }
+      parallaxBg.style.transform = `scaleX(-1) translate(${moveX}px, ${moveY}px) scale(1.15)`;
     });
-  });
-})();
+
+    // Reset positions when mouse leaves
+    hero.addEventListener('mouseleave', () => {
+      parallaxBg.style.transform = 'scaleX(-1) translate(0, 0) scale(1.15)';
+    });
+  }
 </script>
 
-<script src="/consent.js" defer></script>
 </body>
 </html>
