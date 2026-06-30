@@ -658,5 +658,25 @@ footer .legal{max-width:660px;margin:0 auto;line-height:1.7;font-size:.75rem;col
   }
 </script>
 <script src="/consent.js?v=3" defer></script>
+<script>
+(function () {
+  var form = document.querySelector('#kontakt form');
+  if (!form) return;
+  var btn = form.querySelector('button[type=submit]');
+  var label = btn ? btn.textContent : '';
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    if (btn) { btn.disabled = true; btn.textContent = 'Wird gesendet …'; }
+    try {
+      var res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+      if (res.ok) { window.location.href = '/danke.html'; return; }
+      throw new Error('bad status');
+    } catch (err) {
+      alert('Es gab ein Problem beim Senden. Bitte versuch es erneut oder melde dich gern per WhatsApp.');
+      if (btn) { btn.disabled = false; btn.textContent = label; }
+    }
+  });
+})();
+</script>
 </body>
 </html>
